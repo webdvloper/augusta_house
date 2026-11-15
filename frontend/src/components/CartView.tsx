@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 
 import { api } from "@/lib/api";
+import { IS_STATIC } from "@/lib/config";
 import { formatPrice, productsWord } from "@/lib/format";
 import { clearCart, setQuantity, useCart, useHydrated } from "@/lib/store";
 import type { DeliveryMethod, Product } from "@/lib/types";
@@ -237,8 +238,9 @@ export function CartView() {
           {submitting ? "Оформляем…" : "Оформить заказ"}
         </button>
         <p className="text-muted text-xs">
-          Онлайн-оплата пока не подключена: менеджер свяжется с вами, подтвердит наличие и согласует
-          оплату и стоимость доставки.
+          {IS_STATIC
+            ? "Это демо-версия: заказ не будет отправлен, данные остаются в вашем браузере."
+            : "Онлайн-оплата пока не подключена: менеджер свяжется с вами, подтвердит наличие и согласует оплату и стоимость доставки."}
         </p>
       </form>
     </div>

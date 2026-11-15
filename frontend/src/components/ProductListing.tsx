@@ -1,63 +1,39 @@
 import Link from "next/link";
 
 import { api, type ProductQuery } from "@/lib/api";
+import { route } from "@/lib/config";
 import { productsWord } from "@/lib/format";
+import { listingQuery, PAGE_SIZE, parseListing, SORTS, type ListingState } from "@/lib/listing";
+import type { Paginated, Product } from "@/lib/types";
 
 import { ProductGrid } from "./ProductCard";
 import { EmptyState } from "./Ui";
 
 export type SearchParams = Record<string, string | string[] | undefined>;
 
-const SORTS = [
-  ["-created_at", "Сначала новые"],
-  ["price", "Сначала дешёвые"],
-  ["-price", "Сначала дорогие"],
-  ["-views_count", "Популярные"],
-] as const;
-
-const first = (value: string | string[] | undefined) => (Array.isArray(value) ? value[0] : value);
-
-/** Список товаров с фильтрами. Фильтры — обычная GET-форма, работает без JS. */
-export async function ProductListing({
-  basePath,
-  baseQuery,
-  searchParams,
-  hidden = {},
-}: {
+export interface ListingProps {
   basePath: string;
   baseQuery: ProductQuery;
-  searchParams: SearchParams;
+  /** Параметры, которые нужно сохранять при фильтрации (например, q в поиске). */
   hidden?: Record<string, string>;
-}) {
-  const sort = SORTS.some(([value]) => value === first(searchParams.sort))
-    ? first(searchParams.sort)!
-    : "-created_at";
-  const page = Math.max(1, Number(first(searchParams.page)) || 1);
-  const filters = {
-    in_stock: first(searchParams.in_stock) === "1",
-    sale: first(searchParams.sale) === "1",
-    min_price: first(searchParams.min_price) ?? "",
-    max_price: first(searchParams.max_price) ?? "",
-  };
+}
 
-  const data = await api.products({
-    ...baseQuery,
-    ordering: sort,
-    page,
-    in_stock: filters.in_stock || undefined,
-    sale: filters.sale || undefined,
-    min_price: filters.min_price,
-    max_price: filters.max_price,
-  });
-  const pages = Math.ceil(data.count / 12);
+/** Фильтры, сетка и пагинация. Фильтры — обычная GET-форма, работает без JS. */
+export function ListingView({
+  basePath,
+  hidden = {},
+  state,
+  data,
+}: Omit<ListingProps, "baseQuery"> & { state: ListingState; data: Paginated<Product> }) {
+  const pages = Math.ceil(data.count / PAGE_SIZE);
 
   const pageHref = (target: number) => {
     const params = new URLSearchParams(hidden);
-    if (sort !== "-created_at") params.set("sort", sort);
-    if (filters.in_stock) params.set("in_stock", "1");
-    if (filters.sale) params.set("sale", "1");
-    if (filters.min_price) params.set("min_price", filters.min_price);
-    if (filters.max_price) params.set("max_price", filters.max_price);
+    if (state.sort !== "-created_at") params.set("sort", state.sort);
+    if (state.in_stock) params.set("in_stock", "1");
+    if (state.sale) params.set("sale", "1");
+    if (state.min_price) params.set("min_price", state.min_price);
+    if (state.max_price) params.set("max_price", state.max_price);
     if (target > 1) params.set("page", String(target));
     return params.size ? `${basePath}?${params}` : basePath;
   };
@@ -65,7 +41,9 @@ export async function ProductListing({
   return (
     <div className="space-y-5">
       <form
-        action={basePath}
+        // key: при переходе по ссылкам поля формы должны отражать новые параметры
+        key={JSON.stringify(state)}
+        action={route(basePath)}
         className="card flex flex-wrap items-end gap-x-5 gap-y-3 p-4 text-sm"
         aria-label="Фильтры"
       >
@@ -74,7 +52,7 @@ export async function ProductListing({
         ))}
         <label className="flex flex-col gap-1">
           <span className="text-muted text-xs">Сортировка</span>
-          <select name="sort" defaultValue={sort} className="input w-48">
+          <select name="sort" defaultValue={state.sort} className="input w-48">
             {SORTS.map(([value, label]) => (
               <option key={value} value={value}>
                 {label}
@@ -91,7 +69,7 @@ export async function ProductListing({
               min={0}
               placeholder="от"
               aria-label="Цена от"
-              defaultValue={filters.min_price}
+              defaultValue={state.min_price}
               className="input w-24"
             />
             <input
@@ -100,7 +78,7 @@ export async function ProductListing({
               min={0}
               placeholder="до"
               aria-label="Цена до"
-              defaultValue={filters.max_price}
+              defaultValue={state.max_price}
               className="input w-24"
             />
           </div>
@@ -110,7 +88,7 @@ export async function ProductListing({
             type="checkbox"
             name="in_stock"
             value="1"
-            defaultChecked={filters.in_stock}
+            defaultChecked={state.in_stock}
             className="accent-primary size-4"
           />
           В наличии
@@ -120,7 +98,7 @@ export async function ProductListing({
             type="checkbox"
             name="sale"
             value="1"
-            defaultChecked={filters.sale}
+            defaultChecked={state.sale}
             className="accent-primary size-4"
           />
           Со скидкой
@@ -159,9 +137,9 @@ export async function ProductListing({
             <Link
               key={number}
               href={pageHref(number)}
-              aria-current={number === page ? "page" : undefined}
+              aria-current={number === state.page ? "page" : undefined}
               className={`flex size-10 items-center justify-center rounded-lg text-sm font-bold ${
-                number === page
+                number === state.page
                   ? "bg-primary text-white"
                   : "border-border bg-surface hover:border-primary border"
               }`}
@@ -173,4 +151,17 @@ export async function ProductListing({
       )}
     </div>
   );
+}
+
+const first = (value: string | string[] | undefined) => (Array.isArray(value) ? value[0] : value);
+
+/** Серверный список: параметры читаются из запроса, товары — из Django API. */
+export async function ProductListing({
+  searchParams,
+  baseQuery,
+  ...props
+}: ListingProps & { searchParams: SearchParams }) {
+  const state = parseListing((name) => first(searchParams[name]));
+  const data = await api.products(listingQuery(baseQuery, state));
+  return <ListingView {...props} state={state} data={data} />;
 }

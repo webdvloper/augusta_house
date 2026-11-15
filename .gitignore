@@ -224,3 +224,7 @@ node_modules/
 .next/
 backend/media/
 backend/staticfiles/
+
+# Сгенерированные фото статичной демо-версии
+frontend/public/demo/
+frontend/out/

@@ -67,6 +67,23 @@ python manage.py import_products catalog.xlsx              # импортиро�
 | POST | `/api/orders/` | Оформить заказ |
 | GET | `/api/orders/{public_id}/` | Заказ по публичному идентификатору |
 
+## Демо на GitHub Pages
+
+GitHub Pages раздаёт только статические файлы, поэтому там публикуется демо-версия витрины без бэкенда:
+каталог берётся из снимка (`frontend/src/lib/demo-catalog.json` + фото в `frontend/public/demo/`),
+фильтры и поиск работают в браузере, а оформление заказа показывает демо-подтверждение и ничего не отправляет.
+Админки в демо нет.
+
+Публикация — workflow `.github/workflows/pages.yml`: запускается при пуше в `main` или вручную.
+Один раз включите в репозитории **Settings → Pages → Source: GitHub Actions**.
+
+Собрать демо локально:
+
+```bash
+cd backend && python manage.py export_static        # снимок каталога и фото
+cd ../frontend && NEXT_PUBLIC_STATIC_DEMO=1 NEXT_PUBLIC_BASE_PATH=/augusta_house npm run build   # → out/
+```
+
 ## Проверки
 
 ```bash

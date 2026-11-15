@@ -6,6 +6,7 @@ import { Icon, type IconName } from "@/components/Icon";
 import { ProductGridSkeleton } from "@/components/ProductCard";
 import { CategoryTiles, CollectionsShowcase, PopularProducts } from "@/components/Sections";
 import { SectionTitle } from "@/components/Ui";
+import { asset } from "@/lib/config";
 import { company } from "@/lib/format";
 
 const benefits: { icon: IconName; title: string; text: string }[] = [
@@ -71,7 +72,7 @@ export default function HomePage() {
           </a>
         </div>
         <div className="bg-primary flex items-center justify-center p-8">
-          <img src="/logo.png" alt="Логотип Augusta House" width={240} height={240} />
+          <img src={asset("/logo.png")} alt="Логотип Augusta House" width={240} height={240} />
         </div>
       </section>
 

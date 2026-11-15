@@ -9,10 +9,16 @@ import { Icon } from "@/components/Icon";
 import { ProductGrid } from "@/components/ProductCard";
 import { Breadcrumbs, PageSkeleton, SectionTitle } from "@/components/Ui";
 import { api, ApiError } from "@/lib/api";
+import { IS_STATIC } from "@/lib/config";
 import { formatPrice } from "@/lib/format";
 
 // cache: карточка и метаданные делят один запрос, просмотр засчитывается один раз.
 const getProduct = cache((sku: string) => api.product(sku));
+
+export async function generateStaticParams() {
+  if (!IS_STATIC) return [{ sku: "__placeholder__" }];
+  return (await api.products({ page_size: 60 })).results.map(({ sku }) => ({ sku }));
+}
 
 export async function generateMetadata({ params }: PageProps<"/product/[sku]">): Promise<Metadata> {
   const { sku } = await params;

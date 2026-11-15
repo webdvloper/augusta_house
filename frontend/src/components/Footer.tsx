@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { asset } from "@/lib/config";
 import { company } from "@/lib/format";
 
 import { Icon } from "./Icon";
@@ -40,7 +41,13 @@ export function Footer() {
     <footer className="bg-primary-dark mt-16 text-white">
       <div className="container-page grid gap-x-8 gap-y-2 py-10 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-y-8">
         <div className="mb-6 space-y-3 md:mb-0">
-          <img src="/logo.png" alt={company.name} width={96} height={96} className="rounded-xl" />
+          <img
+            src={asset("/logo.png")}
+            alt={company.name}
+            width={96}
+            height={96}
+            className="rounded-xl"
+          />
           <p className="text-mint/90 max-w-xs text-sm">
             Ткани, шторы и интерьерный декор оптом и в розницу с {company.since} года.
           </p>

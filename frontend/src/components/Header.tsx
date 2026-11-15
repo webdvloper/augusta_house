@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 
 import { api } from "@/lib/api";
+import { asset, route } from "@/lib/config";
 import { company } from "@/lib/format";
 
 import { HeaderActions } from "./HeaderActions";
@@ -9,7 +10,7 @@ import { Icon } from "./Icon";
 
 function SearchForm() {
   return (
-    <form action="/search" role="search" className="relative flex-1">
+    <form action={route("/search")} role="search" className="relative flex-1">
       <Icon
         name="search"
         className="text-primary/70 pointer-events-none absolute top-1/2 left-3.5 size-5 -translate-y-1/2"
@@ -46,7 +47,13 @@ export function Header() {
     <header className="border-border bg-surface sticky top-0 z-40 border-b">
       <div className="container-page flex flex-wrap items-center gap-x-4 gap-y-2.5 py-2.5 md:flex-nowrap md:gap-6">
         <Link href="/" className="flex shrink-0 items-center gap-2.5" aria-label="На главную">
-          <img src="/emblem.png" alt="" width={44} height={44} className="size-10 md:size-11" />
+          <img
+            src={asset("/emblem.png")}
+            alt=""
+            width={44}
+            height={44}
+            className="size-10 md:size-11"
+          />
           <span className="font-display text-primary text-xl leading-none font-bold md:text-2xl">
             {company.name}
           </span>
