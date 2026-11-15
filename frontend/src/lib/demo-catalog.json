@@ -1,0 +1,2836 @@
+{
+  "categories": [
+    {
+      "id": 29,
+      "name": "Ткани",
+      "slug": "tkani",
+      "parent": null,
+      "image": "/demo/media/AH-1022-1.jpg",
+      "product_count": 22,
+      "children": [
+        {
+          "id": 30,
+          "name": "Тюль и вуаль",
+          "slug": "tyul-i-vual",
+          "parent": 29,
+          "image": "/demo/media/AH-1006-1.jpg",
+          "product_count": 6,
+          "children": []
+        },
+        {
+          "id": 31,
+          "name": "Портьерные ткани",
+          "slug": "porternye-tkani",
+          "parent": 29,
+          "image": "/demo/media/AH-1012-1.jpg",
+          "product_count": 6,
+          "children": []
+        },
+        {
+          "id": 32,
+          "name": "Дизайнерский шёлк",
+          "slug": "dizaynerskiy-shelk",
+          "parent": 29,
+          "image": "/demo/media/AH-1018-1.jpg",
+          "product_count": 6,
+          "children": []
+        },
+        {
+          "id": 33,
+          "name": "Шёлк дюпион",
+          "slug": "shelk-dyupion",
+          "parent": 29,
+          "image": "/demo/media/AH-1022-1.jpg",
+          "product_count": 4,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Шторы",
+      "slug": "shtory",
+      "parent": null,
+      "image": "/demo/media/AH-1034-1.jpg",
+      "product_count": 12,
+      "children": [
+        {
+          "id": 35,
+          "name": "Шторы тюлевые",
+          "slug": "shtory-tyulevye",
+          "parent": 34,
+          "image": "/demo/media/AH-1028-1.jpg",
+          "product_count": 6,
+          "children": []
+        },
+        {
+          "id": 36,
+          "name": "Шторы портьерные",
+          "slug": "shtory-porternye",
+          "parent": 34,
+          "image": "/demo/media/AH-1034-1.jpg",
+          "product_count": 6,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Декор для штор",
+      "slug": "dekor-dlya-shtor",
+      "parent": null,
+      "image": "/demo/media/AH-1052-1.jpg",
+      "product_count": 18,
+      "children": [
+        {
+          "id": 38,
+          "name": "Подхваты и кисти",
+          "slug": "podhvaty-i-kisti",
+          "parent": 37,
+          "image": "/demo/media/AH-1040-1.jpg",
+          "product_count": 6,
+          "children": []
+        },
+        {
+          "id": 39,
+          "name": "Декоративные шнуры",
+          "slug": "dekorativnye-shnury",
+          "parent": 37,
+          "image": "/demo/media/AH-1046-1.jpg",
+          "product_count": 6,
+          "children": []
+        },
+        {
+          "id": 40,
+          "name": "Декоративная тесьма",
+          "slug": "dekorativnaya-tesma",
+          "parent": 37,
+          "image": "/demo/media/AH-1052-1.jpg",
+          "product_count": 6,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Подушки",
+      "slug": "podushki",
+      "parent": null,
+      "image": "/demo/media/AH-1058-1.jpg",
+      "product_count": 6,
+      "children": [
+        {
+          "id": 42,
+          "name": "Подушки декоративные",
+          "slug": "podushki-dekorativnye",
+          "parent": 41,
+          "image": "/demo/media/AH-1058-1.jpg",
+          "product_count": 6,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": 175,
+      "sku": "AH-1058",
+      "name": "Подушка декоративная Boudoir слоновая кость",
+      "description": "Декоративная подушка со съёмным чехлом на молнии, наполнитель — холлофайбер.\n\nЦвет: слоновая кость. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "5210.00",
+      "old_price": "6512.00",
+      "discount_percent": 20,
+      "stock": 84,
+      "unit": "шт",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 362,
+      "category": {
+        "id": 42,
+        "name": "Подушки декоративные",
+        "slug": "podushki-dekorativnye"
+      },
+      "image": "/demo/media/AH-1058-1.jpg",
+      "photos": [
+        {
+          "id": 347,
+          "image": "/demo/media/AH-1058-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 348,
+          "image": "/demo/media/AH-1058-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Подушки",
+          "slug": "podushki"
+        },
+        {
+          "name": "Подушки декоративные",
+          "slug": "podushki-dekorativnye"
+        }
+      ],
+      "collections": ["rasprodazha"],
+      "newest_rank": 0
+    },
+    {
+      "id": 174,
+      "sku": "AH-1057",
+      "name": "Подушка декоративная Boudoir бирюзовый",
+      "description": "Декоративная подушка со съёмным чехлом на молнии, наполнитель — холлофайбер.\n\nЦвет: бирюзовый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "2950.00",
+      "old_price": "3688.00",
+      "discount_percent": 20,
+      "stock": 26,
+      "unit": "шт",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 205,
+      "category": {
+        "id": 42,
+        "name": "Подушки декоративные",
+        "slug": "podushki-dekorativnye"
+      },
+      "image": "/demo/media/AH-1057-1.jpg",
+      "photos": [
+        {
+          "id": 345,
+          "image": "/demo/media/AH-1057-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 346,
+          "image": "/demo/media/AH-1057-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Подушки",
+          "slug": "podushki"
+        },
+        {
+          "name": "Подушки декоративные",
+          "slug": "podushki-dekorativnye"
+        }
+      ],
+      "collections": ["rasprodazha", "biryuza-i-izumrud"],
+      "newest_rank": 1
+    },
+    {
+      "id": 173,
+      "sku": "AH-1056",
+      "name": "Подушка декоративная Classic 45×45 шоколад",
+      "description": "Декоративная подушка со съёмным чехлом на молнии, наполнитель — холлофайбер.\n\nЦвет: шоколад. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "2410.00",
+      "old_price": "3012.00",
+      "discount_percent": 20,
+      "stock": 99,
+      "unit": "шт",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 284,
+      "category": {
+        "id": 42,
+        "name": "Подушки декоративные",
+        "slug": "podushki-dekorativnye"
+      },
+      "image": "/demo/media/AH-1056-1.jpg",
+      "photos": [
+        {
+          "id": 343,
+          "image": "/demo/media/AH-1056-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 344,
+          "image": "/demo/media/AH-1056-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Подушки",
+          "slug": "podushki"
+        },
+        {
+          "name": "Подушки декоративные",
+          "slug": "podushki-dekorativnye"
+        }
+      ],
+      "collections": ["novinki-sezona", "rasprodazha"],
+      "newest_rank": 2
+    },
+    {
+      "id": 172,
+      "sku": "AH-1055",
+      "name": "Подушка декоративная Classic 45×45 терракотовый",
+      "description": "Декоративная подушка со съёмным чехлом на молнии, наполнитель — холлофайбер.\n\nЦвет: терракотовый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "2980.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 42,
+      "unit": "шт",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 207,
+      "category": {
+        "id": 42,
+        "name": "Подушки декоративные",
+        "slug": "podushki-dekorativnye"
+      },
+      "image": "/demo/media/AH-1055-1.jpg",
+      "photos": [
+        {
+          "id": 341,
+          "image": "/demo/media/AH-1055-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 342,
+          "image": "/demo/media/AH-1055-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Подушки",
+          "slug": "podushki"
+        },
+        {
+          "name": "Подушки декоративные",
+          "slug": "podushki-dekorativnye"
+        }
+      ],
+      "collections": ["zoloto-i-terrakota"],
+      "newest_rank": 3
+    },
+    {
+      "id": 171,
+      "sku": "AH-1054",
+      "name": "Подушка декоративная Square терракотовый",
+      "description": "Декоративная подушка со съёмным чехлом на молнии, наполнитель — холлофайбер.\n\nЦвет: терракотовый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "4290.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 25,
+      "unit": "шт",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 356,
+      "category": {
+        "id": 42,
+        "name": "Подушки декоративные",
+        "slug": "podushki-dekorativnye"
+      },
+      "image": "/demo/media/AH-1054-1.jpg",
+      "photos": [
+        {
+          "id": 339,
+          "image": "/demo/media/AH-1054-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 340,
+          "image": "/demo/media/AH-1054-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Подушки",
+          "slug": "podushki"
+        },
+        {
+          "name": "Подушки декоративные",
+          "slug": "podushki-dekorativnye"
+        }
+      ],
+      "collections": ["zoloto-i-terrakota"],
+      "newest_rank": 4
+    },
+    {
+      "id": 170,
+      "sku": "AH-1053",
+      "name": "Подушка декоративная Square оливковый",
+      "description": "Декоративная подушка со съёмным чехлом на молнии, наполнитель — холлофайбер.\n\nЦвет: оливковый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "3260.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 67,
+      "unit": "шт",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 384,
+      "category": {
+        "id": 42,
+        "name": "Подушки декоративные",
+        "slug": "podushki-dekorativnye"
+      },
+      "image": "/demo/media/AH-1053-1.jpg",
+      "photos": [
+        {
+          "id": 337,
+          "image": "/demo/media/AH-1053-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 338,
+          "image": "/demo/media/AH-1053-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Подушки",
+          "slug": "podushki"
+        },
+        {
+          "name": "Подушки декоративные",
+          "slug": "podushki-dekorativnye"
+        }
+      ],
+      "collections": ["novinki-sezona"],
+      "newest_rank": 5
+    },
+    {
+      "id": 169,
+      "sku": "AH-1052",
+      "name": "Тесьма декоративная с помпонами слоновая кость",
+      "description": "Отделочная тесьма с бахромой. Ширина 6 см, пришивается по краю портьер.\n\nЦвет: слоновая кость. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "640.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 24,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 56,
+      "category": {
+        "id": 40,
+        "name": "Декоративная тесьма",
+        "slug": "dekorativnaya-tesma"
+      },
+      "image": "/demo/media/AH-1052-1.jpg",
+      "photos": [
+        {
+          "id": 335,
+          "image": "/demo/media/AH-1052-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 336,
+          "image": "/demo/media/AH-1052-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Декоративная тесьма",
+          "slug": "dekorativnaya-tesma"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 6
+    },
+    {
+      "id": 168,
+      "sku": "AH-1051",
+      "name": "Тесьма декоративная с помпонами золотой",
+      "description": "Отделочная тесьма с бахромой. Ширина 6 см, пришивается по краю портьер.\n\nЦвет: золотой. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "790.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 112,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 106,
+      "category": {
+        "id": 40,
+        "name": "Декоративная тесьма",
+        "slug": "dekorativnaya-tesma"
+      },
+      "image": "/demo/media/AH-1051-1.jpg",
+      "photos": [
+        {
+          "id": 333,
+          "image": "/demo/media/AH-1051-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 334,
+          "image": "/demo/media/AH-1051-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Декоративная тесьма",
+          "slug": "dekorativnaya-tesma"
+        }
+      ],
+      "collections": ["zoloto-i-terrakota"],
+      "newest_rank": 7
+    },
+    {
+      "id": 167,
+      "sku": "AH-1050",
+      "name": "Тесьма декоративная Grosellas бронза",
+      "description": "Отделочная тесьма с бахромой. Ширина 6 см, пришивается по краю портьер.\n\nЦвет: бронза. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "570.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 37,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 255,
+      "category": {
+        "id": 40,
+        "name": "Декоративная тесьма",
+        "slug": "dekorativnaya-tesma"
+      },
+      "image": "/demo/media/AH-1050-1.jpg",
+      "photos": [
+        {
+          "id": 331,
+          "image": "/demo/media/AH-1050-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 332,
+          "image": "/demo/media/AH-1050-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Декоративная тесьма",
+          "slug": "dekorativnaya-tesma"
+        }
+      ],
+      "collections": ["novinki-sezona", "zoloto-i-terrakota"],
+      "newest_rank": 8
+    },
+    {
+      "id": 166,
+      "sku": "AH-1049",
+      "name": "Тесьма декоративная Grosellas слоновая кость",
+      "description": "Отделочная тесьма с бахромой. Ширина 6 см, пришивается по краю портьер.\n\nЦвет: слоновая кость. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "590.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 33,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 142,
+      "category": {
+        "id": 40,
+        "name": "Декоративная тесьма",
+        "slug": "dekorativnaya-tesma"
+      },
+      "image": "/demo/media/AH-1049-1.jpg",
+      "photos": [
+        {
+          "id": 329,
+          "image": "/demo/media/AH-1049-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 330,
+          "image": "/demo/media/AH-1049-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Декоративная тесьма",
+          "slug": "dekorativnaya-tesma"
+        }
+      ],
+      "collections": ["novinki-sezona"],
+      "newest_rank": 9
+    },
+    {
+      "id": 165,
+      "sku": "AH-1048",
+      "name": "Тесьма декоративная Fleco с бахромой золотой",
+      "description": "Отделочная тесьма с бахромой. Ширина 6 см, пришивается по краю портьер.\n\nЦвет: золотой. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "640.00",
+      "old_price": "800.00",
+      "discount_percent": 20,
+      "stock": 58,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 95,
+      "category": {
+        "id": 40,
+        "name": "Декоративная тесьма",
+        "slug": "dekorativnaya-tesma"
+      },
+      "image": "/demo/media/AH-1048-1.jpg",
+      "photos": [
+        {
+          "id": 327,
+          "image": "/demo/media/AH-1048-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 328,
+          "image": "/demo/media/AH-1048-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Декоративная тесьма",
+          "slug": "dekorativnaya-tesma"
+        }
+      ],
+      "collections": ["rasprodazha", "zoloto-i-terrakota"],
+      "newest_rank": 10
+    },
+    {
+      "id": 164,
+      "sku": "AH-1047",
+      "name": "Тесьма декоративная Fleco с бахромой бирюзовый",
+      "description": "Отделочная тесьма с бахромой. Ширина 6 см, пришивается по краю портьер.\n\nЦвет: бирюзовый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "890.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 17,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 205,
+      "category": {
+        "id": 40,
+        "name": "Декоративная тесьма",
+        "slug": "dekorativnaya-tesma"
+      },
+      "image": "/demo/media/AH-1047-1.jpg",
+      "photos": [
+        {
+          "id": 325,
+          "image": "/demo/media/AH-1047-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 326,
+          "image": "/demo/media/AH-1047-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Декоративная тесьма",
+          "slug": "dekorativnaya-tesma"
+        }
+      ],
+      "collections": ["novinki-sezona", "biryuza-i-izumrud"],
+      "newest_rank": 11
+    },
+    {
+      "id": 163,
+      "sku": "AH-1046",
+      "name": "Шнур декоративный с кантом шоколад",
+      "description": "Витой декоративный шнур для отделки штор, подушек и мебели.\n\nЦвет: шоколад. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "510.00",
+      "old_price": "638.00",
+      "discount_percent": 20,
+      "stock": 49,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 194,
+      "category": {
+        "id": 39,
+        "name": "Декоративные шнуры",
+        "slug": "dekorativnye-shnury"
+      },
+      "image": "/demo/media/AH-1046-1.jpg",
+      "photos": [
+        {
+          "id": 323,
+          "image": "/demo/media/AH-1046-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 324,
+          "image": "/demo/media/AH-1046-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Декоративные шнуры",
+          "slug": "dekorativnye-shnury"
+        }
+      ],
+      "collections": ["rasprodazha"],
+      "newest_rank": 12
+    },
+    {
+      "id": 162,
+      "sku": "AH-1045",
+      "name": "Шнур декоративный с кантом изумрудный",
+      "description": "Витой декоративный шнур для отделки штор, подушек и мебели.\n\nЦвет: изумрудный. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "270.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 118,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 11,
+      "category": {
+        "id": 39,
+        "name": "Декоративные шнуры",
+        "slug": "dekorativnye-shnury"
+      },
+      "image": "/demo/media/AH-1045-1.jpg",
+      "photos": [
+        {
+          "id": 321,
+          "image": "/demo/media/AH-1045-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 322,
+          "image": "/demo/media/AH-1045-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Декоративные шнуры",
+          "slug": "dekorativnye-shnury"
+        }
+      ],
+      "collections": ["novinki-sezona", "biryuza-i-izumrud"],
+      "newest_rank": 13
+    },
+    {
+      "id": 161,
+      "sku": "AH-1044",
+      "name": "Шнур декоративный витой 12 мм бронза",
+      "description": "Витой декоративный шнур для отделки штор, подушек и мебели.\n\nЦвет: бронза. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "270.00",
+      "old_price": "338.00",
+      "discount_percent": 20,
+      "stock": 64,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 356,
+      "category": {
+        "id": 39,
+        "name": "Декоративные шнуры",
+        "slug": "dekorativnye-shnury"
+      },
+      "image": "/demo/media/AH-1044-1.jpg",
+      "photos": [
+        {
+          "id": 319,
+          "image": "/demo/media/AH-1044-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 320,
+          "image": "/demo/media/AH-1044-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Декоративные шнуры",
+          "slug": "dekorativnye-shnury"
+        }
+      ],
+      "collections": ["rasprodazha", "zoloto-i-terrakota"],
+      "newest_rank": 14
+    },
+    {
+      "id": 160,
+      "sku": "AH-1043",
+      "name": "Шнур декоративный витой 12 мм слоновая кость",
+      "description": "Витой декоративный шнур для отделки штор, подушек и мебели.\n\nЦвет: слоновая кость. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "230.00",
+      "old_price": "288.00",
+      "discount_percent": 20,
+      "stock": 50,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 42,
+      "category": {
+        "id": 39,
+        "name": "Декоративные шнуры",
+        "slug": "dekorativnye-shnury"
+      },
+      "image": "/demo/media/AH-1043-1.jpg",
+      "photos": [
+        {
+          "id": 317,
+          "image": "/demo/media/AH-1043-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 318,
+          "image": "/demo/media/AH-1043-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Декоративные шнуры",
+          "slug": "dekorativnye-shnury"
+        }
+      ],
+      "collections": ["novinki-sezona", "rasprodazha"],
+      "newest_rank": 15
+    },
+    {
+      "id": 159,
+      "sku": "AH-1042",
+      "name": "Шнур декоративный витой 8 мм голубой",
+      "description": "Витой декоративный шнур для отделки штор, подушек и мебели.\n\nЦвет: голубой. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "370.00",
+      "old_price": "462.00",
+      "discount_percent": 20,
+      "stock": 9,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 87,
+      "category": {
+        "id": 39,
+        "name": "Декоративные шнуры",
+        "slug": "dekorativnye-shnury"
+      },
+      "image": "/demo/media/AH-1042-1.jpg",
+      "photos": [
+        {
+          "id": 315,
+          "image": "/demo/media/AH-1042-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 316,
+          "image": "/demo/media/AH-1042-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Декоративные шнуры",
+          "slug": "dekorativnye-shnury"
+        }
+      ],
+      "collections": ["rasprodazha"],
+      "newest_rank": 16
+    },
+    {
+      "id": 158,
+      "sku": "AH-1041",
+      "name": "Шнур декоративный витой 8 мм терракотовый",
+      "description": "Витой декоративный шнур для отделки штор, подушек и мебели.\n\nЦвет: терракотовый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "440.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 16,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 267,
+      "category": {
+        "id": 39,
+        "name": "Декоративные шнуры",
+        "slug": "dekorativnye-shnury"
+      },
+      "image": "/demo/media/AH-1041-1.jpg",
+      "photos": [
+        {
+          "id": 313,
+          "image": "/demo/media/AH-1041-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 314,
+          "image": "/demo/media/AH-1041-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Декоративные шнуры",
+          "slug": "dekorativnye-shnury"
+        }
+      ],
+      "collections": ["novinki-sezona", "zoloto-i-terrakota"],
+      "newest_rank": 17
+    },
+    {
+      "id": 157,
+      "sku": "AH-1040",
+      "name": "Подхват-кисть Milano золотой",
+      "description": "Декоративный подхват с кистью ручной работы. Длина шнура 80 см, кисть 28 см.\n\nЦвет: золотой. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "2260.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 95,
+      "unit": "шт",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 383,
+      "category": {
+        "id": 38,
+        "name": "Подхваты и кисти",
+        "slug": "podhvaty-i-kisti"
+      },
+      "image": "/demo/media/AH-1040-1.jpg",
+      "photos": [
+        {
+          "id": 311,
+          "image": "/demo/media/AH-1040-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 312,
+          "image": "/demo/media/AH-1040-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Подхваты и кисти",
+          "slug": "podhvaty-i-kisti"
+        }
+      ],
+      "collections": ["zoloto-i-terrakota"],
+      "newest_rank": 18
+    },
+    {
+      "id": 156,
+      "sku": "AH-1039",
+      "name": "Подхват-кисть Milano слоновая кость",
+      "description": "Декоративный подхват с кистью ручной работы. Длина шнура 80 см, кисть 28 см.\n\nЦвет: слоновая кость. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "1460.00",
+      "old_price": "1825.00",
+      "discount_percent": 20,
+      "stock": 110,
+      "unit": "шт",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 5,
+      "category": {
+        "id": 38,
+        "name": "Подхваты и кисти",
+        "slug": "podhvaty-i-kisti"
+      },
+      "image": "/demo/media/AH-1039-1.jpg",
+      "photos": [
+        {
+          "id": 309,
+          "image": "/demo/media/AH-1039-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 310,
+          "image": "/demo/media/AH-1039-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Подхваты и кисти",
+          "slug": "podhvaty-i-kisti"
+        }
+      ],
+      "collections": ["novinki-sezona", "rasprodazha"],
+      "newest_rank": 19
+    },
+    {
+      "id": 155,
+      "sku": "AH-1038",
+      "name": "Подхват-кисть Barocco графит",
+      "description": "Декоративный подхват с кистью ручной работы. Длина шнура 80 см, кисть 28 см.\n\nЦвет: графит. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "3070.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 104,
+      "unit": "шт",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 262,
+      "category": {
+        "id": 38,
+        "name": "Подхваты и кисти",
+        "slug": "podhvaty-i-kisti"
+      },
+      "image": "/demo/media/AH-1038-1.jpg",
+      "photos": [
+        {
+          "id": 307,
+          "image": "/demo/media/AH-1038-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 308,
+          "image": "/demo/media/AH-1038-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Подхваты и кисти",
+          "slug": "podhvaty-i-kisti"
+        }
+      ],
+      "collections": ["novinki-sezona"],
+      "newest_rank": 20
+    },
+    {
+      "id": 154,
+      "sku": "AH-1037",
+      "name": "Подхват-кисть Barocco бордо",
+      "description": "Декоративный подхват с кистью ручной работы. Длина шнура 80 см, кисть 28 см.\n\nЦвет: бордо. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "1850.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 92,
+      "unit": "шт",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 398,
+      "category": {
+        "id": 38,
+        "name": "Подхваты и кисти",
+        "slug": "podhvaty-i-kisti"
+      },
+      "image": "/demo/media/AH-1037-1.jpg",
+      "photos": [
+        {
+          "id": 305,
+          "image": "/demo/media/AH-1037-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 306,
+          "image": "/demo/media/AH-1037-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Подхваты и кисти",
+          "slug": "podhvaty-i-kisti"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 21
+    },
+    {
+      "id": 153,
+      "sku": "AH-1036",
+      "name": "Подхват-кисть Royal пудровый",
+      "description": "Декоративный подхват с кистью ручной работы. Длина шнура 80 см, кисть 28 см.\n\nЦвет: пудровый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "3600.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 0,
+      "unit": "шт",
+      "in_stock": false,
+      "is_new": false,
+      "views_count": 265,
+      "category": {
+        "id": 38,
+        "name": "Подхваты и кисти",
+        "slug": "podhvaty-i-kisti"
+      },
+      "image": "/demo/media/AH-1036-1.jpg",
+      "photos": [
+        {
+          "id": 303,
+          "image": "/demo/media/AH-1036-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 304,
+          "image": "/demo/media/AH-1036-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Подхваты и кисти",
+          "slug": "podhvaty-i-kisti"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 22
+    },
+    {
+      "id": 152,
+      "sku": "AH-1035",
+      "name": "Подхват-кисть Royal шоколад",
+      "description": "Декоративный подхват с кистью ручной работы. Длина шнура 80 см, кисть 28 см.\n\nЦвет: шоколад. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "2900.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 78,
+      "unit": "шт",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 65,
+      "category": {
+        "id": 38,
+        "name": "Подхваты и кисти",
+        "slug": "podhvaty-i-kisti"
+      },
+      "image": "/demo/media/AH-1035-1.jpg",
+      "photos": [
+        {
+          "id": 301,
+          "image": "/demo/media/AH-1035-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 302,
+          "image": "/demo/media/AH-1035-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Декор для штор",
+          "slug": "dekor-dlya-shtor"
+        },
+        {
+          "name": "Подхваты и кисти",
+          "slug": "podhvaty-i-kisti"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 23
+    },
+    {
+      "id": 151,
+      "sku": "AH-1034",
+      "name": "Шторы портьерные Palazzo графит",
+      "description": "Комплект портьер на подкладке: 2 полотна 150 × 270 см, подхваты в комплекте.\n\nЦвет: графит. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "9530.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 0,
+      "unit": "компл",
+      "in_stock": false,
+      "is_new": false,
+      "views_count": 53,
+      "category": {
+        "id": 36,
+        "name": "Шторы портьерные",
+        "slug": "shtory-porternye"
+      },
+      "image": "/demo/media/AH-1034-1.jpg",
+      "photos": [
+        {
+          "id": 299,
+          "image": "/demo/media/AH-1034-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 300,
+          "image": "/demo/media/AH-1034-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Шторы",
+          "slug": "shtory"
+        },
+        {
+          "name": "Шторы портьерные",
+          "slug": "shtory-porternye"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 24
+    },
+    {
+      "id": 150,
+      "sku": "AH-1033",
+      "name": "Шторы портьерные Palazzo оливковый",
+      "description": "Комплект портьер на подкладке: 2 полотна 150 × 270 см, подхваты в комплекте.\n\nЦвет: оливковый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "10700.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 36,
+      "unit": "компл",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 230,
+      "category": {
+        "id": 36,
+        "name": "Шторы портьерные",
+        "slug": "shtory-porternye"
+      },
+      "image": "/demo/media/AH-1033-1.jpg",
+      "photos": [
+        {
+          "id": 297,
+          "image": "/demo/media/AH-1033-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 298,
+          "image": "/demo/media/AH-1033-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Шторы",
+          "slug": "shtory"
+        },
+        {
+          "name": "Шторы портьерные",
+          "slug": "shtory-porternye"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 25
+    },
+    {
+      "id": 149,
+      "sku": "AH-1032",
+      "name": "Шторы портьерные VICTORIA пудровый",
+      "description": "Комплект портьер на подкладке: 2 полотна 150 × 270 см, подхваты в комплекте.\n\nЦвет: пудровый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "13570.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 0,
+      "unit": "компл",
+      "in_stock": false,
+      "is_new": false,
+      "views_count": 155,
+      "category": {
+        "id": 36,
+        "name": "Шторы портьерные",
+        "slug": "shtory-porternye"
+      },
+      "image": "/demo/media/AH-1032-1.jpg",
+      "photos": [
+        {
+          "id": 295,
+          "image": "/demo/media/AH-1032-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 296,
+          "image": "/demo/media/AH-1032-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Шторы",
+          "slug": "shtory"
+        },
+        {
+          "name": "Шторы портьерные",
+          "slug": "shtory-porternye"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 26
+    },
+    {
+      "id": 148,
+      "sku": "AH-1031",
+      "name": "Шторы портьерные VICTORIA оливковый",
+      "description": "Комплект портьер на подкладке: 2 полотна 150 × 270 см, подхваты в комплекте.\n\nЦвет: оливковый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "14550.00",
+      "old_price": "18188.00",
+      "discount_percent": 20,
+      "stock": 58,
+      "unit": "компл",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 17,
+      "category": {
+        "id": 36,
+        "name": "Шторы портьерные",
+        "slug": "shtory-porternye"
+      },
+      "image": "/demo/media/AH-1031-1.jpg",
+      "photos": [
+        {
+          "id": 293,
+          "image": "/demo/media/AH-1031-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 294,
+          "image": "/demo/media/AH-1031-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Шторы",
+          "slug": "shtory"
+        },
+        {
+          "name": "Шторы портьерные",
+          "slug": "shtory-porternye"
+        }
+      ],
+      "collections": ["rasprodazha"],
+      "newest_rank": 27
+    },
+    {
+      "id": 147,
+      "sku": "AH-1030",
+      "name": "Шторы портьерные MICHELLE золотой",
+      "description": "Комплект портьер на подкладке: 2 полотна 150 × 270 см, подхваты в комплекте.\n\nЦвет: золотой. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "10050.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 55,
+      "unit": "компл",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 232,
+      "category": {
+        "id": 36,
+        "name": "Шторы портьерные",
+        "slug": "shtory-porternye"
+      },
+      "image": "/demo/media/AH-1030-1.jpg",
+      "photos": [
+        {
+          "id": 291,
+          "image": "/demo/media/AH-1030-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 292,
+          "image": "/demo/media/AH-1030-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Шторы",
+          "slug": "shtory"
+        },
+        {
+          "name": "Шторы портьерные",
+          "slug": "shtory-porternye"
+        }
+      ],
+      "collections": ["novinki-sezona", "zoloto-i-terrakota"],
+      "newest_rank": 28
+    },
+    {
+      "id": 146,
+      "sku": "AH-1029",
+      "name": "Шторы портьерные MICHELLE голубой",
+      "description": "Комплект портьер на подкладке: 2 полотна 150 × 270 см, подхваты в комплекте.\n\nЦвет: голубой. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "8940.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 92,
+      "unit": "компл",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 288,
+      "category": {
+        "id": 36,
+        "name": "Шторы портьерные",
+        "slug": "shtory-porternye"
+      },
+      "image": "/demo/media/AH-1029-1.jpg",
+      "photos": [
+        {
+          "id": 289,
+          "image": "/demo/media/AH-1029-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 290,
+          "image": "/demo/media/AH-1029-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Шторы",
+          "slug": "shtory"
+        },
+        {
+          "name": "Шторы портьерные",
+          "slug": "shtory-porternye"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 29
+    },
+    {
+      "id": 145,
+      "sku": "AH-1028",
+      "name": "Шторы тюлевые Voile оливковый",
+      "description": "Готовый комплект тюлевых штор на шторной ленте: 2 полотна 300 × 270 см.\n\nЦвет: оливковый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "5860.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 48,
+      "unit": "компл",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 317,
+      "category": {
+        "id": 35,
+        "name": "Шторы тюлевые",
+        "slug": "shtory-tyulevye"
+      },
+      "image": "/demo/media/AH-1028-1.jpg",
+      "photos": [
+        {
+          "id": 287,
+          "image": "/demo/media/AH-1028-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 288,
+          "image": "/demo/media/AH-1028-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Шторы",
+          "slug": "shtory"
+        },
+        {
+          "name": "Шторы тюлевые",
+          "slug": "shtory-tyulevye"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 30
+    },
+    {
+      "id": 144,
+      "sku": "AH-1027",
+      "name": "Шторы тюлевые Voile шоколад",
+      "description": "Готовый комплект тюлевых штор на шторной ленте: 2 полотна 300 × 270 см.\n\nЦвет: шоколад. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "4780.00",
+      "old_price": "5975.00",
+      "discount_percent": 20,
+      "stock": 34,
+      "unit": "компл",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 119,
+      "category": {
+        "id": 35,
+        "name": "Шторы тюлевые",
+        "slug": "shtory-tyulevye"
+      },
+      "image": "/demo/media/AH-1027-1.jpg",
+      "photos": [
+        {
+          "id": 285,
+          "image": "/demo/media/AH-1027-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 286,
+          "image": "/demo/media/AH-1027-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Шторы",
+          "slug": "shtory"
+        },
+        {
+          "name": "Шторы тюлевые",
+          "slug": "shtory-tyulevye"
+        }
+      ],
+      "collections": ["novinki-sezona", "rasprodazha"],
+      "newest_rank": 31
+    },
+    {
+      "id": 143,
+      "sku": "AH-1026",
+      "name": "Шторы тюлевые Nuage бирюзовый",
+      "description": "Готовый комплект тюлевых штор на шторной ленте: 2 полотна 300 × 270 см.\n\nЦвет: бирюзовый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "7300.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 15,
+      "unit": "компл",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 230,
+      "category": {
+        "id": 35,
+        "name": "Шторы тюлевые",
+        "slug": "shtory-tyulevye"
+      },
+      "image": "/demo/media/AH-1026-1.jpg",
+      "photos": [
+        {
+          "id": 283,
+          "image": "/demo/media/AH-1026-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 284,
+          "image": "/demo/media/AH-1026-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Шторы",
+          "slug": "shtory"
+        },
+        {
+          "name": "Шторы тюлевые",
+          "slug": "shtory-tyulevye"
+        }
+      ],
+      "collections": ["biryuza-i-izumrud"],
+      "newest_rank": 32
+    },
+    {
+      "id": 142,
+      "sku": "AH-1025",
+      "name": "Шторы тюлевые Nuage бронза",
+      "description": "Готовый комплект тюлевых штор на шторной ленте: 2 полотна 300 × 270 см.\n\nЦвет: бронза. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "7040.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 60,
+      "unit": "компл",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 57,
+      "category": {
+        "id": 35,
+        "name": "Шторы тюлевые",
+        "slug": "shtory-tyulevye"
+      },
+      "image": "/demo/media/AH-1025-1.jpg",
+      "photos": [
+        {
+          "id": 281,
+          "image": "/demo/media/AH-1025-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 282,
+          "image": "/demo/media/AH-1025-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Шторы",
+          "slug": "shtory"
+        },
+        {
+          "name": "Шторы тюлевые",
+          "slug": "shtory-tyulevye"
+        }
+      ],
+      "collections": ["zoloto-i-terrakota"],
+      "newest_rank": 33
+    },
+    {
+      "id": 141,
+      "sku": "AH-1024",
+      "name": "Шторы тюлевые Brise бордо",
+      "description": "Готовый комплект тюлевых штор на шторной ленте: 2 полотна 300 × 270 см.\n\nЦвет: бордо. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "5270.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 0,
+      "unit": "компл",
+      "in_stock": false,
+      "is_new": false,
+      "views_count": 45,
+      "category": {
+        "id": 35,
+        "name": "Шторы тюлевые",
+        "slug": "shtory-tyulevye"
+      },
+      "image": "/demo/media/AH-1024-1.jpg",
+      "photos": [
+        {
+          "id": 279,
+          "image": "/demo/media/AH-1024-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 280,
+          "image": "/demo/media/AH-1024-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Шторы",
+          "slug": "shtory"
+        },
+        {
+          "name": "Шторы тюлевые",
+          "slug": "shtory-tyulevye"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 34
+    },
+    {
+      "id": 140,
+      "sku": "AH-1023",
+      "name": "Шторы тюлевые Brise бирюзовый",
+      "description": "Готовый комплект тюлевых штор на шторной ленте: 2 полотна 300 × 270 см.\n\nЦвет: бирюзовый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "5540.00",
+      "old_price": "6925.00",
+      "discount_percent": 20,
+      "stock": 60,
+      "unit": "компл",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 41,
+      "category": {
+        "id": 35,
+        "name": "Шторы тюлевые",
+        "slug": "shtory-tyulevye"
+      },
+      "image": "/demo/media/AH-1023-1.jpg",
+      "photos": [
+        {
+          "id": 277,
+          "image": "/demo/media/AH-1023-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 278,
+          "image": "/demo/media/AH-1023-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Шторы",
+          "slug": "shtory"
+        },
+        {
+          "name": "Шторы тюлевые",
+          "slug": "shtory-tyulevye"
+        }
+      ],
+      "collections": ["rasprodazha", "biryuza-i-izumrud"],
+      "newest_rank": 35
+    },
+    {
+      "id": 139,
+      "sku": "AH-1022",
+      "name": "Шёлк дюпион Dupion Stripe бирюзовый",
+      "description": "Шёлк дюпион 100% с характерной фактурной нитью. Ширина 137 см.\n\nЦвет: бирюзовый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "3640.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 8,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 323,
+      "category": {
+        "id": 33,
+        "name": "Шёлк дюпион",
+        "slug": "shelk-dyupion"
+      },
+      "image": "/demo/media/AH-1022-1.jpg",
+      "photos": [
+        {
+          "id": 275,
+          "image": "/demo/media/AH-1022-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 276,
+          "image": "/demo/media/AH-1022-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Шёлк дюпион",
+          "slug": "shelk-dyupion"
+        }
+      ],
+      "collections": ["biryuza-i-izumrud", "naturalnyy-shelk"],
+      "newest_rank": 36
+    },
+    {
+      "id": 138,
+      "sku": "AH-1021",
+      "name": "Шёлк дюпион Dupion Stripe бордо",
+      "description": "Шёлк дюпион 100% с характерной фактурной нитью. Ширина 137 см.\n\nЦвет: бордо. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "3380.00",
+      "old_price": "4225.00",
+      "discount_percent": 20,
+      "stock": 4,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 218,
+      "category": {
+        "id": 33,
+        "name": "Шёлк дюпион",
+        "slug": "shelk-dyupion"
+      },
+      "image": "/demo/media/AH-1021-1.jpg",
+      "photos": [
+        {
+          "id": 273,
+          "image": "/demo/media/AH-1021-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 274,
+          "image": "/demo/media/AH-1021-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Шёлк дюпион",
+          "slug": "shelk-dyupion"
+        }
+      ],
+      "collections": ["rasprodazha", "naturalnyy-shelk"],
+      "newest_rank": 37
+    },
+    {
+      "id": 137,
+      "sku": "AH-1020",
+      "name": "Шёлк дюпион Dupion Classic шоколад",
+      "description": "Шёлк дюпион 100% с характерной фактурной нитью. Ширина 137 см.\n\nЦвет: шоколад. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "3410.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 30,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 239,
+      "category": {
+        "id": 33,
+        "name": "Шёлк дюпион",
+        "slug": "shelk-dyupion"
+      },
+      "image": "/demo/media/AH-1020-1.jpg",
+      "photos": [
+        {
+          "id": 271,
+          "image": "/demo/media/AH-1020-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 272,
+          "image": "/demo/media/AH-1020-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Шёлк дюпион",
+          "slug": "shelk-dyupion"
+        }
+      ],
+      "collections": ["naturalnyy-shelk"],
+      "newest_rank": 38
+    },
+    {
+      "id": 136,
+      "sku": "AH-1019",
+      "name": "Шёлк дюпион Dupion Classic бирюзовый",
+      "description": "Шёлк дюпион 100% с характерной фактурной нитью. Ширина 137 см.\n\nЦвет: бирюзовый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "5080.00",
+      "old_price": "6350.00",
+      "discount_percent": 20,
+      "stock": 9,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 116,
+      "category": {
+        "id": 33,
+        "name": "Шёлк дюпион",
+        "slug": "shelk-dyupion"
+      },
+      "image": "/demo/media/AH-1019-1.jpg",
+      "photos": [
+        {
+          "id": 269,
+          "image": "/demo/media/AH-1019-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 270,
+          "image": "/demo/media/AH-1019-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Шёлк дюпион",
+          "slug": "shelk-dyupion"
+        }
+      ],
+      "collections": ["rasprodazha", "biryuza-i-izumrud", "naturalnyy-shelk"],
+      "newest_rank": 39
+    },
+    {
+      "id": 135,
+      "sku": "AH-1018",
+      "name": "Шёлк дизайнерский Orient изумрудный",
+      "description": "Натуральный шёлк 100% с жаккардовым рисунком для штор, покрывал и декора. Ширина 140 см.\n\nЦвет: изумрудный. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "8460.00",
+      "old_price": "10575.00",
+      "discount_percent": 20,
+      "stock": 97,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 289,
+      "category": {
+        "id": 32,
+        "name": "Дизайнерский шёлк",
+        "slug": "dizaynerskiy-shelk"
+      },
+      "image": "/demo/media/AH-1018-1.jpg",
+      "photos": [
+        {
+          "id": 267,
+          "image": "/demo/media/AH-1018-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 268,
+          "image": "/demo/media/AH-1018-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Дизайнерский шёлк",
+          "slug": "dizaynerskiy-shelk"
+        }
+      ],
+      "collections": ["rasprodazha", "biryuza-i-izumrud", "naturalnyy-shelk"],
+      "newest_rank": 40
+    },
+    {
+      "id": 134,
+      "sku": "AH-1017",
+      "name": "Шёлк дизайнерский Orient золотой",
+      "description": "Натуральный шёлк 100% с жаккардовым рисунком для штор, покрывал и декора. Ширина 140 см.\n\nЦвет: золотой. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "8350.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 74,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 219,
+      "category": {
+        "id": 32,
+        "name": "Дизайнерский шёлк",
+        "slug": "dizaynerskiy-shelk"
+      },
+      "image": "/demo/media/AH-1017-1.jpg",
+      "photos": [
+        {
+          "id": 265,
+          "image": "/demo/media/AH-1017-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 266,
+          "image": "/demo/media/AH-1017-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Дизайнерский шёлк",
+          "slug": "dizaynerskiy-shelk"
+        }
+      ],
+      "collections": ["zoloto-i-terrakota", "naturalnyy-shelk"],
+      "newest_rank": 41
+    },
+    {
+      "id": 133,
+      "sku": "AH-1016",
+      "name": "Шёлк дизайнерский Damasco изумрудный",
+      "description": "Натуральный шёлк 100% с жаккардовым рисунком для штор, покрывал и декора. Ширина 140 см.\n\nЦвет: изумрудный. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "4300.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 48,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 308,
+      "category": {
+        "id": 32,
+        "name": "Дизайнерский шёлк",
+        "slug": "dizaynerskiy-shelk"
+      },
+      "image": "/demo/media/AH-1016-1.jpg",
+      "photos": [
+        {
+          "id": 263,
+          "image": "/demo/media/AH-1016-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 264,
+          "image": "/demo/media/AH-1016-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Дизайнерский шёлк",
+          "slug": "dizaynerskiy-shelk"
+        }
+      ],
+      "collections": ["biryuza-i-izumrud", "naturalnyy-shelk"],
+      "newest_rank": 42
+    },
+    {
+      "id": 132,
+      "sku": "AH-1015",
+      "name": "Шёлк дизайнерский Damasco оливковый",
+      "description": "Натуральный шёлк 100% с жаккардовым рисунком для штор, покрывал и декора. Ширина 140 см.\n\nЦвет: оливковый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "8870.00",
+      "old_price": "11088.00",
+      "discount_percent": 20,
+      "stock": 115,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 303,
+      "category": {
+        "id": 32,
+        "name": "Дизайнерский шёлк",
+        "slug": "dizaynerskiy-shelk"
+      },
+      "image": "/demo/media/AH-1015-1.jpg",
+      "photos": [
+        {
+          "id": 261,
+          "image": "/demo/media/AH-1015-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 262,
+          "image": "/demo/media/AH-1015-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Дизайнерский шёлк",
+          "slug": "dizaynerskiy-shelk"
+        }
+      ],
+      "collections": ["rasprodazha", "naturalnyy-shelk"],
+      "newest_rank": 43
+    },
+    {
+      "id": 131,
+      "sku": "AH-1014",
+      "name": "Шёлк дизайнерский Florence изумрудный",
+      "description": "Натуральный шёлк 100% с жаккардовым рисунком для штор, покрывал и декора. Ширина 140 см.\n\nЦвет: изумрудный. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "6820.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 0,
+      "unit": "м",
+      "in_stock": false,
+      "is_new": false,
+      "views_count": 106,
+      "category": {
+        "id": 32,
+        "name": "Дизайнерский шёлк",
+        "slug": "dizaynerskiy-shelk"
+      },
+      "image": "/demo/media/AH-1014-1.jpg",
+      "photos": [
+        {
+          "id": 259,
+          "image": "/demo/media/AH-1014-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 260,
+          "image": "/demo/media/AH-1014-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Дизайнерский шёлк",
+          "slug": "dizaynerskiy-shelk"
+        }
+      ],
+      "collections": ["biryuza-i-izumrud", "naturalnyy-shelk"],
+      "newest_rank": 44
+    },
+    {
+      "id": 130,
+      "sku": "AH-1013",
+      "name": "Шёлк дизайнерский Florence бронза",
+      "description": "Натуральный шёлк 100% с жаккардовым рисунком для штор, покрывал и декора. Ширина 140 см.\n\nЦвет: бронза. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "5840.00",
+      "old_price": "7300.00",
+      "discount_percent": 20,
+      "stock": 110,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 105,
+      "category": {
+        "id": 32,
+        "name": "Дизайнерский шёлк",
+        "slug": "dizaynerskiy-shelk"
+      },
+      "image": "/demo/media/AH-1013-1.jpg",
+      "photos": [
+        {
+          "id": 257,
+          "image": "/demo/media/AH-1013-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 258,
+          "image": "/demo/media/AH-1013-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Дизайнерский шёлк",
+          "slug": "dizaynerskiy-shelk"
+        }
+      ],
+      "collections": ["novinki-sezona", "rasprodazha", "zoloto-i-terrakota", "naturalnyy-shelk"],
+      "newest_rank": 45
+    },
+    {
+      "id": 129,
+      "sku": "AH-1012",
+      "name": "Ткань портьерная Soft Line оливковый",
+      "description": "Плотная портьерная ткань с благородным матовым блеском. Ширина 280 см, хорошо держит складку и не выгорает.\n\nЦвет: оливковый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "3590.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 0,
+      "unit": "м",
+      "in_stock": false,
+      "is_new": false,
+      "views_count": 107,
+      "category": {
+        "id": 31,
+        "name": "Портьерные ткани",
+        "slug": "porternye-tkani"
+      },
+      "image": "/demo/media/AH-1012-1.jpg",
+      "photos": [
+        {
+          "id": 255,
+          "image": "/demo/media/AH-1012-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 256,
+          "image": "/demo/media/AH-1012-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Портьерные ткани",
+          "slug": "porternye-tkani"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 46
+    },
+    {
+      "id": 128,
+      "sku": "AH-1011",
+      "name": "Ткань портьерная Soft Line шоколад",
+      "description": "Плотная портьерная ткань с благородным матовым блеском. Ширина 280 см, хорошо держит складку и не выгорает.\n\nЦвет: шоколад. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "3240.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 104,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 292,
+      "category": {
+        "id": 31,
+        "name": "Портьерные ткани",
+        "slug": "porternye-tkani"
+      },
+      "image": "/demo/media/AH-1011-1.jpg",
+      "photos": [
+        {
+          "id": 253,
+          "image": "/demo/media/AH-1011-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 254,
+          "image": "/demo/media/AH-1011-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Портьерные ткани",
+          "slug": "porternye-tkani"
+        }
+      ],
+      "collections": ["novinki-sezona"],
+      "newest_rank": 47
+    },
+    {
+      "id": 127,
+      "sku": "AH-1010",
+      "name": "Ткань портьерная VICTORIA пудровый",
+      "description": "Плотная портьерная ткань с благородным матовым блеском. Ширина 280 см, хорошо держит складку и не выгорает.\n\nЦвет: пудровый. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "2040.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 97,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 148,
+      "category": {
+        "id": 31,
+        "name": "Портьерные ткани",
+        "slug": "porternye-tkani"
+      },
+      "image": "/demo/media/AH-1010-1.jpg",
+      "photos": [
+        {
+          "id": 251,
+          "image": "/demo/media/AH-1010-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 252,
+          "image": "/demo/media/AH-1010-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Портьерные ткани",
+          "slug": "porternye-tkani"
+        }
+      ],
+      "collections": ["novinki-sezona"],
+      "newest_rank": 48
+    },
+    {
+      "id": 126,
+      "sku": "AH-1009",
+      "name": "Ткань портьерная VICTORIA шоколад",
+      "description": "Плотная портьерная ткань с благородным матовым блеском. Ширина 280 см, хорошо держит складку и не выгорает.\n\nЦвет: шоколад. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "2110.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 114,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 278,
+      "category": {
+        "id": 31,
+        "name": "Портьерные ткани",
+        "slug": "porternye-tkani"
+      },
+      "image": "/demo/media/AH-1009-1.jpg",
+      "photos": [
+        {
+          "id": 249,
+          "image": "/demo/media/AH-1009-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 250,
+          "image": "/demo/media/AH-1009-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Портьерные ткани",
+          "slug": "porternye-tkani"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 49
+    },
+    {
+      "id": 125,
+      "sku": "AH-1008",
+      "name": "Ткань портьерная MICHELLE изумрудный",
+      "description": "Плотная портьерная ткань с благородным матовым блеском. Ширина 280 см, хорошо держит складку и не выгорает.\n\nЦвет: изумрудный. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "3180.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 0,
+      "unit": "м",
+      "in_stock": false,
+      "is_new": false,
+      "views_count": 354,
+      "category": {
+        "id": 31,
+        "name": "Портьерные ткани",
+        "slug": "porternye-tkani"
+      },
+      "image": "/demo/media/AH-1008-1.jpg",
+      "photos": [
+        {
+          "id": 247,
+          "image": "/demo/media/AH-1008-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 248,
+          "image": "/demo/media/AH-1008-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Портьерные ткани",
+          "slug": "porternye-tkani"
+        }
+      ],
+      "collections": ["biryuza-i-izumrud"],
+      "newest_rank": 50
+    },
+    {
+      "id": 124,
+      "sku": "AH-1007",
+      "name": "Ткань портьерная MICHELLE бордо",
+      "description": "Плотная портьерная ткань с благородным матовым блеском. Ширина 280 см, хорошо держит складку и не выгорает.\n\nЦвет: бордо. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "1550.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 103,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 165,
+      "category": {
+        "id": 31,
+        "name": "Портьерные ткани",
+        "slug": "porternye-tkani"
+      },
+      "image": "/demo/media/AH-1007-1.jpg",
+      "photos": [
+        {
+          "id": 245,
+          "image": "/demo/media/AH-1007-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 246,
+          "image": "/demo/media/AH-1007-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Портьерные ткани",
+          "slug": "porternye-tkani"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 51
+    },
+    {
+      "id": 123,
+      "sku": "AH-1006",
+      "name": "Тюль Микро-Вуаль Aria бордо",
+      "description": "Лёгкая полупрозрачная вуаль мягко рассеивает свет. Ширина рулона 300 см, низ обработан утяжелителем.\n\nЦвет: бордо. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "1440.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 32,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 88,
+      "category": {
+        "id": 30,
+        "name": "Тюль и вуаль",
+        "slug": "tyul-i-vual"
+      },
+      "image": "/demo/media/AH-1006-1.jpg",
+      "photos": [
+        {
+          "id": 243,
+          "image": "/demo/media/AH-1006-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 244,
+          "image": "/demo/media/AH-1006-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Тюль и вуаль",
+          "slug": "tyul-i-vual"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 52
+    },
+    {
+      "id": 122,
+      "sku": "AH-1005",
+      "name": "Тюль Микро-Вуаль Aria голубой",
+      "description": "Лёгкая полупрозрачная вуаль мягко рассеивает свет. Ширина рулона 300 см, низ обработан утяжелителем.\n\nЦвет: голубой. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "970.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 0,
+      "unit": "м",
+      "in_stock": false,
+      "is_new": false,
+      "views_count": 348,
+      "category": {
+        "id": 30,
+        "name": "Тюль и вуаль",
+        "slug": "tyul-i-vual"
+      },
+      "image": "/demo/media/AH-1005-1.jpg",
+      "photos": [
+        {
+          "id": 241,
+          "image": "/demo/media/AH-1005-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 242,
+          "image": "/demo/media/AH-1005-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Тюль и вуаль",
+          "slug": "tyul-i-vual"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 53
+    },
+    {
+      "id": 121,
+      "sku": "AH-1004",
+      "name": "Тюль Микро-Вуаль Lumiere голубой",
+      "description": "Лёгкая полупрозрачная вуаль мягко рассеивает свет. Ширина рулона 300 см, низ обработан утяжелителем.\n\nЦвет: голубой. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "1260.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 49,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 87,
+      "category": {
+        "id": 30,
+        "name": "Тюль и вуаль",
+        "slug": "tyul-i-vual"
+      },
+      "image": "/demo/media/AH-1004-1.jpg",
+      "photos": [
+        {
+          "id": 239,
+          "image": "/demo/media/AH-1004-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 240,
+          "image": "/demo/media/AH-1004-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Тюль и вуаль",
+          "slug": "tyul-i-vual"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 54
+    },
+    {
+      "id": 120,
+      "sku": "AH-1003",
+      "name": "Тюль Микро-Вуаль Lumiere слоновая кость",
+      "description": "Лёгкая полупрозрачная вуаль мягко рассеивает свет. Ширина рулона 300 см, низ обработан утяжелителем.\n\nЦвет: слоновая кость. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "840.00",
+      "old_price": "1050.00",
+      "discount_percent": 20,
+      "stock": 46,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": false,
+      "views_count": 228,
+      "category": {
+        "id": 30,
+        "name": "Тюль и вуаль",
+        "slug": "tyul-i-vual"
+      },
+      "image": "/demo/media/AH-1003-1.jpg",
+      "photos": [
+        {
+          "id": 237,
+          "image": "/demo/media/AH-1003-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 238,
+          "image": "/demo/media/AH-1003-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Тюль и вуаль",
+          "slug": "tyul-i-vual"
+        }
+      ],
+      "collections": ["rasprodazha"],
+      "newest_rank": 55
+    },
+    {
+      "id": 119,
+      "sku": "AH-1002",
+      "name": "Тюль Микро-Вуаль с утяжелителем золотой",
+      "description": "Лёгкая полупрозрачная вуаль мягко рассеивает свет. Ширина рулона 300 см, низ обработан утяжелителем.\n\nЦвет: золотой. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "700.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 81,
+      "unit": "м",
+      "in_stock": true,
+      "is_new": true,
+      "views_count": 34,
+      "category": {
+        "id": 30,
+        "name": "Тюль и вуаль",
+        "slug": "tyul-i-vual"
+      },
+      "image": "/demo/media/AH-1002-1.jpg",
+      "photos": [
+        {
+          "id": 235,
+          "image": "/demo/media/AH-1002-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 236,
+          "image": "/demo/media/AH-1002-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Тюль и вуаль",
+          "slug": "tyul-i-vual"
+        }
+      ],
+      "collections": ["novinki-sezona", "zoloto-i-terrakota"],
+      "newest_rank": 56
+    },
+    {
+      "id": 118,
+      "sku": "AH-1001",
+      "name": "Тюль Микро-Вуаль с утяжелителем графит",
+      "description": "Лёгкая полупрозрачная вуаль мягко рассеивает свет. Ширина рулона 300 см, низ обработан утяжелителем.\n\nЦвет: графит. Состав и уход указаны на ярлыке. Оттенок на экране может отличаться от реального.",
+      "price": "1110.00",
+      "old_price": null,
+      "discount_percent": 0,
+      "stock": 0,
+      "unit": "м",
+      "in_stock": false,
+      "is_new": false,
+      "views_count": 308,
+      "category": {
+        "id": 30,
+        "name": "Тюль и вуаль",
+        "slug": "tyul-i-vual"
+      },
+      "image": "/demo/media/AH-1001-1.jpg",
+      "photos": [
+        {
+          "id": 233,
+          "image": "/demo/media/AH-1001-1.jpg",
+          "sort_order": 0,
+          "is_main": true
+        },
+        {
+          "id": 234,
+          "image": "/demo/media/AH-1001-2.jpg",
+          "sort_order": 1,
+          "is_main": false
+        }
+      ],
+      "breadcrumbs": [
+        {
+          "name": "Ткани",
+          "slug": "tkani"
+        },
+        {
+          "name": "Тюль и вуаль",
+          "slug": "tyul-i-vual"
+        }
+      ],
+      "collections": [],
+      "newest_rank": 57
+    }
+  ],
+  "collections": [
+    {
+      "id": 11,
+      "name": "Новинки сезона",
+      "slug": "novinki-sezona",
+      "description": "Свежие поступления тканей и декора"
+    },
+    {
+      "id": 12,
+      "name": "Распродажа",
+      "slug": "rasprodazha",
+      "description": "Последние метры и комплекты со скидкой"
+    },
+    {
+      "id": 13,
+      "name": "Золото и терракота",
+      "slug": "zoloto-i-terrakota",
+      "description": "Тёплая гамма для гостиной и спальни"
+    },
+    {
+      "id": 14,
+      "name": "Бирюза и изумруд",
+      "slug": "biryuza-i-izumrud",
+      "description": "Фирменные оттенки Augusta House"
+    },
+    {
+      "id": 15,
+      "name": "Натуральный шёлк",
+      "slug": "naturalnyy-shelk",
+      "description": "Шёлк 100% — метражом и в готовых изделиях"
+    }
+  ]
+}

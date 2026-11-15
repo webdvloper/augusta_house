@@ -228,3 +228,6 @@ backend/staticfiles/
 # Сгенерированные фото статичной демо-версии
 frontend/public/demo/
 frontend/out/
+
+# Шаблон Python выше игнорирует lib/ — код фронтенда нужно хранить
+!frontend/src/lib/
