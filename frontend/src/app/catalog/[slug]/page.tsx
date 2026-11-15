@@ -3,9 +3,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { cache, Suspense } from "react";
 
+import { ClientListing } from "@/components/ClientListing";
+import { ProductGridSkeleton } from "@/components/ProductCard";
 import { ProductListing, type SearchParams } from "@/components/ProductListing";
 import { Breadcrumbs, PageSkeleton } from "@/components/Ui";
 import { api } from "@/lib/api";
+import { IS_STATIC } from "@/lib/config";
 import type { Category } from "@/lib/types";
 
 /** Ищет рубрику в дереве и возвращает путь от корня до неё. */
@@ -20,6 +23,14 @@ function findPath(tree: Category[], slug: string, trail: Category[] = []): Categ
 }
 
 const getTree = cache(() => api.categories());
+
+const flatten = (tree: Category[]): Category[] =>
+  tree.flatMap((node) => [node, ...flatten(node.children)]);
+
+export async function generateStaticParams() {
+  if (!IS_STATIC) return [{ slug: "__placeholder__" }];
+  return [{ slug: "all" }, ...flatten(await getTree()).map(({ slug }) => ({ slug }))];
+}
 
 export async function generateMetadata({
   params,
@@ -37,7 +48,7 @@ async function Content({
   params: Promise<{ slug: string }>;
   searchParams: Promise<SearchParams>;
 }) {
-  const [{ slug }, query] = await Promise.all([params, searchParams]);
+  const { slug } = await params;
   const all = slug === "all";
 
   let path: Category[] = [];
@@ -79,11 +90,17 @@ async function Content({
         </div>
       )}
 
-      <ProductListing
-        basePath={`/catalog/${slug}`}
-        baseQuery={all ? {} : { category: slug }}
-        searchParams={query}
-      />
+      {IS_STATIC ? (
+        <Suspense fallback={<ProductGridSkeleton />}>
+          <ClientListing basePath={`/catalog/${slug}`} baseQuery={all ? {} : { category: slug }} />
+        </Suspense>
+      ) : (
+        <ProductListing
+          basePath={`/catalog/${slug}`}
+          baseQuery={all ? {} : { category: slug }}
+          searchParams={await searchParams}
+        />
+      )}
     </>
   );
 }

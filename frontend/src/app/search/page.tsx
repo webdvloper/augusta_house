@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 
+import { ClientSearch } from "@/components/ClientListing";
 import { ProductListing, type SearchParams } from "@/components/ProductListing";
 import { Breadcrumbs, EmptyState, PageSkeleton } from "@/components/Ui";
+import { IS_STATIC } from "@/lib/config";
 
 export const metadata: Metadata = { title: "Поиск" };
 
@@ -12,7 +14,6 @@ async function Content({ searchParams }: { searchParams: Promise<SearchParams> }
 
   return (
     <>
-      <Breadcrumbs items={[{ name: "Поиск" }]} />
       <h1 className="mb-5 text-4xl sm:text-5xl">{q ? `Поиск: «${q}»` : "Поиск"}</h1>
       {q ? (
         <ProductListing
@@ -34,8 +35,9 @@ async function Content({ searchParams }: { searchParams: Promise<SearchParams> }
 export default function SearchPage({ searchParams }: PageProps<"/search">) {
   return (
     <div className="container-page py-6 sm:py-8">
+      <Breadcrumbs items={[{ name: "Поиск" }]} />
       <Suspense fallback={<PageSkeleton />}>
-        <Content searchParams={searchParams} />
+        {IS_STATIC ? <ClientSearch /> : <Content searchParams={searchParams} />}
       </Suspense>
     </div>
   );

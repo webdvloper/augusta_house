@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
+import { asset } from "@/lib/config";
+
 import { Icon } from "./Icon";
 
 export function Breadcrumbs({ items }: { items: { name: string; href?: string }[] }) {
@@ -71,7 +73,7 @@ export function EmptyState({
 }) {
   return (
     <div className="card flex flex-col items-center gap-3 px-6 py-14 text-center">
-      <img src="/emblem.png" alt="" width={72} height={72} className="opacity-90" />
+      <img src={asset("/emblem.png")} alt="" width={72} height={72} className="opacity-90" />
       <p className="font-display text-2xl font-bold">{title}</p>
       {text && <p className="text-muted max-w-md text-sm">{text}</p>}
       {action}

@@ -6,6 +6,7 @@ import { Icon } from "@/components/Icon";
 import { ApiNotice } from "@/components/Sections";
 import { Breadcrumbs } from "@/components/Ui";
 import { api } from "@/lib/api";
+import { asset } from "@/lib/config";
 import { productsWord } from "@/lib/format";
 
 export const metadata: Metadata = { title: "Подборки" };
@@ -25,7 +26,7 @@ async function CollectionList() {
               {collection.preview.map((product) => (
                 <img
                   key={product.sku}
-                  src={product.image ?? "/emblem.png"}
+                  src={product.image ?? asset("/emblem.png")}
                   alt=""
                   loading="lazy"
                   className="border-surface size-20 rounded-xl border-2 object-cover shadow-sm"
