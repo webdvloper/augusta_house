@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import "@fontsource-variable/manrope";
+@import "@fontsource/cormorant-garamond/600.css";
+@import "@fontsource/cormorant-garamond/700.css";
+
+/* Палитра Natural Elegance: светлая основа, бирюзовый — действия, зелёный — акценты. */
+:root {
+  --color-background: #f7f6f0;
+  --color-text: #183b37;
+  --color-primary: #035567;
+  --color-secondary: #75b02d;
+  --color-surface: #ffffff;
+  --color-border: #dde5df;
+  --color-disabled: #a7b5ae;
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-text: var(--color-text);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-surface: var(--color-surface);
+  --color-border: var(--color-border);
+  --color-disabled: var(--color-disabled);
+
+  /* Производные оттенки из логотипа */
+  --color-primary-dark: #114b50;
+  --color-mint: #def8f5;
+  --color-muted: #557370;
+  --color-sale: #a8452f;
+
+  --font-sans: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+
+  --shadow-card: 0 1px 2px rgb(24 59 55 / 0.06), 0 6px 20px rgb(24 59 55 / 0.05);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+@layer base {
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  button,
+  [role="button"],
+  summary {
+    cursor: pointer;
+  }
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-colors disabled:cursor-not-allowed;
+}
+
+@utility btn-primary {
+  @apply btn bg-primary hover:bg-primary-dark disabled:bg-disabled disabled:text-text text-white;
+}
+
+@utility btn-outline {
+  @apply btn border-primary text-primary hover:bg-mint border bg-transparent;
+}
+
+/* На зелёном — только тёмный текст (контраст 4.65:1). */
+@utility btn-accent {
+  @apply btn bg-secondary text-text hover:brightness-105;
+}
+
+@utility card {
+  @apply border-border bg-surface shadow-card rounded-2xl border;
+}
+
+@utility input {
+  @apply border-border bg-surface placeholder:text-muted/70 focus:border-primary w-full rounded-lg border px-3.5 py-2.5 text-sm outline-none;
+}
+
+@utility skeleton {
+  @apply bg-border/70 animate-pulse rounded-xl;
+}
+
+/* Горизонтальные ленты без полосы прокрутки */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
