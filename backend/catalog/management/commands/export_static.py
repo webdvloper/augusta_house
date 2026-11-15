@@ -115,5 +115,6 @@ class Command(BaseCommand):
             ],
         }
         target = Path(options["json"])
+        target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(json.dumps(snapshot, ensure_ascii=False, indent=1) + "\n", "utf-8")
         self.stdout.write(self.style.SUCCESS(f"Выгружено товаров: {len(products)} → {target}"))
