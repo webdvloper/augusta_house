@@ -6,6 +6,7 @@ export interface CategoryBrief {
 
 export interface Category extends CategoryBrief {
   parent: number | null;
+  description: string;
   image: string | null;
   product_count: number;
   children: Category[];
@@ -46,6 +47,8 @@ export interface Collection {
   name: string;
   slug: string;
   description: string;
+  image: string | null;
+  is_featured: boolean;
   product_count: number;
   preview: Product[];
 }

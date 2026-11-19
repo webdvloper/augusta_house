@@ -11,10 +11,10 @@ FRONTEND = settings.BASE_DIR.parent / "frontend"
 
 
 class Command(BaseCommand):
-    help = "Выгружает каталог в JSON и копирует фото — для статичной демо-версии витрины."
+    help = "Выгружает каталог из базы в JSON и копирует фото — для статичной версии витрины."
 
     def add_arguments(self, parser):
-        parser.add_argument("--json", default=str(FRONTEND / "src/lib/demo-catalog.json"))
+        parser.add_argument("--json", default=str(FRONTEND / "src/generated/catalog.json"))
         parser.add_argument("--media", default=str(FRONTEND / "public/demo/media"))
 
     def handle(self, *args, **options):
@@ -92,6 +92,7 @@ class Command(BaseCommand):
                         "name": category.name,
                         "slug": category.slug,
                         "parent": category.parent_id,
+                        "description": category.description,
                         "image": copy(category.image, f"category-{category.slug}")
                         if category.image
                         else covers.get(category.pk),
@@ -101,19 +102,27 @@ class Command(BaseCommand):
                 )
             return nodes
 
-        snapshot = {
-            "categories": tree(None),
-            "products": products,
-            "collections": [
+        images = {product["sku"]: product["image"] for product in products}
+        collections = []
+        for collection in Collection.objects.filter(is_hidden=False).prefetch_related("products"):
+            members = [p.sku for p in collection.products.all() if p.sku in images]
+            cover = (
+                copy(collection.image, f"collection-{collection.slug}")
+                if collection.image
+                else next((images[sku] for sku in members if images[sku]), None)
+            )
+            collections.append(
                 {
                     "id": collection.pk,
                     "name": collection.name,
                     "slug": collection.slug,
                     "description": collection.description,
+                    "image": cover,
+                    "is_featured": collection.is_featured,
                 }
-                for collection in Collection.objects.all()
-            ],
-        }
+            )
+
+        snapshot = {"categories": tree(None), "products": products, "collections": collections}
         target = Path(options["json"])
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(json.dumps(snapshot, ensure_ascii=False, indent=1) + "\n", "utf-8")

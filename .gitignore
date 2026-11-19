@@ -225,8 +225,9 @@ node_modules/
 backend/media/
 backend/staticfiles/
 
-# Сгенерированные фото статичной демо-версии
+# Статичная версия витрины: снимок каталога и фото генерируются из базы при сборке
 frontend/public/demo/
+frontend/src/generated/
 frontend/out/
 
 # Шаблон Python выше игнорирует lib/ — код фронтенда нужно хранить

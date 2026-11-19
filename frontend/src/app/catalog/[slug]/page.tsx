@@ -58,7 +58,9 @@ async function Content({
   }
   const category = path.at(-1);
   const title = category?.name ?? "Все товары";
-  const siblings = category?.children.length ? category.children : (path.at(-2)?.children ?? []);
+  const siblings = (
+    category?.children.length ? category.children : (path.at(-2)?.children ?? [])
+  ).filter((node) => node.product_count > 0 || node.slug === slug);
 
   return (
     <>
@@ -69,7 +71,10 @@ async function Content({
           { name: title },
         ]}
       />
-      <h1 className="mb-5 text-4xl sm:text-5xl">{title}</h1>
+      <h1 className="text-4xl sm:text-5xl">{title}</h1>
+      <p className="text-muted mt-1 mb-5 max-w-2xl text-sm">
+        {category?.description || "Ткани, шторы и декор Augusta House."}
+      </p>
 
       {siblings.length > 0 && (
         <div className="no-scrollbar mb-5 flex gap-2 overflow-x-auto text-sm font-semibold">

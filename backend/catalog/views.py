@@ -130,9 +130,14 @@ class CollectionViewSet(viewsets.ReadOnlyModelViewSet):
 
     def get_queryset(self):
         products = Product.objects.select_related("category").prefetch_related("photos")
-        return Collection.objects.annotate(
-            product_count=Count("products", filter=Q(products__is_hidden=False))
-        ).prefetch_related(Prefetch("products", queryset=products))
+        queryset = (
+            Collection.objects.filter(is_hidden=False)
+            .annotate(product_count=Count("products", filter=Q(products__is_hidden=False)))
+            .prefetch_related(Prefetch("products", queryset=products))
+        )
+        if self.request.query_params.get("featured") in ("1", "true"):
+            queryset = queryset.filter(is_featured=True)
+        return queryset
 
     def get_serializer_context(self):
         context = super().get_serializer_context()

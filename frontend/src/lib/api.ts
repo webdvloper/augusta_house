@@ -1,4 +1,5 @@
 import { IS_STATIC } from "./config";
+import { ApiError } from "./errors";
 import { staticApi } from "./static-api";
 import type {
   Category,
@@ -12,15 +13,7 @@ import type {
 
 export const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
-export class ApiError extends Error {
-  constructor(
-    message: string,
-    public status: number,
-  ) {
-    super(message);
-    this.name = "ApiError";
-  }
-}
+export { ApiError };
 
 type Query = Record<string, string | number | boolean | undefined | null>;
 
@@ -70,7 +63,8 @@ const httpApi = {
   categories: () => request<Category[]>("/categories/"),
   products: (query?: ProductQuery) => request<Paginated<Product>>("/products/", query),
   product: (sku: string) => request<ProductDetail>(`/products/${encodeURIComponent(sku)}/`),
-  collections: (preview = 4) => request<Collection[]>("/collections/", { preview }),
+  collections: (preview = 4, featured = false) =>
+    request<Collection[]>("/collections/", { preview, featured: featured || undefined }),
   collection: (slug: string) =>
     request<Collection>(`/collections/${encodeURIComponent(slug)}/`, { preview: 0 }),
   order: (id: string) => request<Order>(`/orders/${encodeURIComponent(id)}/`),
@@ -82,5 +76,15 @@ const httpApi = {
     }),
 };
 
-/** В статичной демо-версии те же методы работают поверх снимка каталога. */
+/** В статичной версии те же методы работают поверх снимка каталога. */
 export const api: typeof httpApi = IS_STATIC ? staticApi : httpApi;
+
+/** Все видимые товары постранично — для generateStaticParams. */
+export async function allProducts(): Promise<Product[]> {
+  const items: Product[] = [];
+  for (let page = 1; ; page++) {
+    const data = await api.products({ page, page_size: 60 });
+    items.push(...data.results);
+    if (items.length >= data.count || !data.results.length) return items;
+  }
+}

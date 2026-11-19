@@ -95,7 +95,16 @@ class CategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Category
-        fields = ("id", "name", "slug", "parent", "image", "product_count", "children")
+        fields = (
+            "id",
+            "name",
+            "slug",
+            "parent",
+            "description",
+            "image",
+            "product_count",
+            "children",
+        )
 
     def _tree(self) -> dict:
         return self.context["category_tree"]
@@ -129,13 +138,36 @@ class CategorySerializer(serializers.ModelSerializer):
 
 class CollectionSerializer(serializers.ModelSerializer):
     product_count = serializers.IntegerField(read_only=True)
+    image = serializers.SerializerMethodField()
     preview = serializers.SerializerMethodField()
 
     class Meta:
         model = Collection
-        fields = ("id", "name", "slug", "description", "product_count", "preview")
+        fields = (
+            "id",
+            "name",
+            "slug",
+            "description",
+            "image",
+            "is_featured",
+            "product_count",
+            "preview",
+        )
+
+    @staticmethod
+    def _visible(obj: Collection) -> list[Product]:
+        return [product for product in obj.products.all() if not product.is_hidden]
+
+    def get_image(self, obj: Collection) -> str | None:
+        if obj.image:
+            return absolute_url(self, obj.image)
+        for product in self._visible(obj):
+            photos = list(product.photos.all())
+            if photos:
+                return absolute_url(self, photos[0].image)
+        return None
 
     def get_preview(self, obj: Collection) -> list[dict]:
         limit = self.context.get("preview_limit", 4)
-        products = [p for p in obj.products.all() if not p.is_hidden][:limit]
+        products = self._visible(obj)[:limit]
         return ProductListSerializer(products, many=True, context=self.context).data

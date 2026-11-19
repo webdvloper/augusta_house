@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@catalog-snapshot": ["./src/lib/empty-catalog.json"]
     }
   },
   "include": [

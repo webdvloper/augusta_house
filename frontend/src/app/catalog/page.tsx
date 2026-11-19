@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 
-import { ApiNotice, CategoryTile } from "@/components/Sections";
+import { ApiNotice, CatalogEmpty, CategoryTile } from "@/components/Sections";
 import { Breadcrumbs } from "@/components/Ui";
 import { api } from "@/lib/api";
 import { productsWord } from "@/lib/format";
@@ -12,18 +12,28 @@ export const metadata: Metadata = { title: "Каталог" };
 async function Rubrics() {
   const categories = await api.categories().catch(() => null);
   if (!categories) return <ApiNotice />;
-  return categories.map((section) => (
+  const sections = categories.filter((section) => section.product_count > 0);
+  if (!sections.length) return <CatalogEmpty />;
+  return sections.map((section) => (
     <section key={section.slug}>
-      <div className="mb-4 flex flex-wrap items-baseline gap-x-3">
-        <h2 className="text-2xl sm:text-3xl">
-          <Link href={`/catalog/${section.slug}`} className="hover:text-primary">
-            {section.name}
-          </Link>
-        </h2>
-        <span className="text-muted text-sm">{productsWord(section.product_count)}</span>
+      <div className="mb-4">
+        <div className="flex flex-wrap items-baseline gap-x-3">
+          <h2 className="text-2xl sm:text-3xl">
+            <Link href={`/catalog/${section.slug}`} className="hover:text-primary">
+              {section.name}
+            </Link>
+          </h2>
+          <span className="text-muted text-sm">{productsWord(section.product_count)}</span>
+        </div>
+        {section.description && (
+          <p className="text-muted mt-1 max-w-2xl text-sm">{section.description}</p>
+        )}
       </div>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
-        {(section.children.length ? section.children : [section]).map((category) => (
+        {(section.children.length
+          ? section.children.filter((child) => child.product_count > 0)
+          : [section]
+        ).map((category) => (
           <CategoryTile key={category.slug} category={category} />
         ))}
       </div>

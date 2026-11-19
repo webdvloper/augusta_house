@@ -66,3 +66,34 @@ class CatalogApiTests(TestCase):
     def test_errors_use_detail_format(self):
         response = self.client.get("/api/products/NOPE/")
         self.assertEqual(list(response.json()), ["detail"])
+
+
+class CatalogManagementTests(TestCase):
+    def test_slug_is_generated_from_russian_name(self):
+        first = Category.objects.create(name="Шторы тюлевые")
+        second = Category.objects.create(name="Шторы тюлевые")
+        self.assertEqual(first.slug, "shtory-tyulevye")
+        self.assertEqual(second.slug, "shtory-tyulevye-2")
+        self.assertEqual(Collection.objects.create(name="Новинки").slug, "novinki")
+
+    def test_old_price_must_exceed_price(self):
+        from django.core.exceptions import ValidationError
+
+        category = Category.objects.create(name="Ткани")
+        product = Product(
+            sku="X-1", name="Ткань", price=Decimal("100"), old_price=Decimal("90"),
+            category=category,
+        )  # fmt: skip
+        with self.assertRaises(ValidationError):
+            product.full_clean()
+
+    def test_hidden_collections_are_not_listed(self):
+        Collection.objects.create(name="Видимая", slug="shown")
+        Collection.objects.create(name="Скрытая", slug="hidden", is_hidden=True)
+        Collection.objects.create(name="Не на главной", slug="plain", is_featured=False)
+        client = APIClient()
+        slugs = {item["slug"] for item in client.get("/api/collections/").json()}
+        self.assertEqual(slugs, {"shown", "plain"})
+        featured = {item["slug"] for item in client.get("/api/collections/?featured=1").json()}
+        self.assertEqual(featured, {"shown"})
+        self.assertEqual(client.get("/api/collections/hidden/").status_code, 404)

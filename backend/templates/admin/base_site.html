@@ -1,0 +1,44 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+  /* Фирменная палитра Augusta House */
+  :root, html[data-theme="light"] {
+    --primary: #035567;
+    --secondary: #114b50;
+    --accent: #75b02d;
+    --header-color: #def8f5;
+    --header-branding-color: #ffffff;
+    --header-bg: #114b50;
+    --header-link-color: #ffffff;
+    --breadcrumbs-bg: #035567;
+    --breadcrumbs-link-fg: #ffffff;
+    --link-fg: #035567;
+    --link-hover-color: #114b50;
+    --link-selected-fg: #035567;
+    --button-bg: #035567;
+    --button-hover-bg: #114b50;
+    --default-button-bg: #035567;
+    --default-button-hover-bg: #114b50;
+    --selected-row: #def8f5;
+    --object-tools-bg: #557370;
+    --object-tools-hover-bg: #035567;
+  }
+  #header { box-shadow: 0 2px 8px rgb(0 0 0 / .08); }
+  #site-name a { font-weight: 700; letter-spacing: .01em; }
+  .module h2, .module caption, .inline-group h2 { background: #035567; }
+  .ah-hint { margin: 0 0 20px; padding: 14px 18px; border-radius: 10px;
+             background: var(--darkened-bg); border-left: 4px solid var(--accent); line-height: 1.5; }
+  .ah-hint code { background: var(--body-bg); padding: 1px 6px; border-radius: 4px; }
+</style>
+{% endblock %}
+
+{% block branding %}
+<div id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></div>
+{% if user.is_anonymous %}{% include "admin/color_theme_toggle.html" %}{% endif %}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

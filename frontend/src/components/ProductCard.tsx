@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 
+import { asset } from "@/lib/config";
 import { formatPrice } from "@/lib/format";
 import { addToCart, toggleFavorite, useCart, useFavorites } from "@/lib/store";
 import type { Product } from "@/lib/types";
@@ -16,7 +17,7 @@ export function ProductCard({ product }: { product: Product }) {
   const href = `/product/${encodeURIComponent(product.sku)}`;
 
   return (
-    <article className="card group relative flex flex-col overflow-hidden">
+    <article className="card group hover:border-primary/30 relative flex flex-col overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_36px_rgb(24_59_55/0.12)]">
       <Link href={href} className="bg-background relative block aspect-square overflow-hidden">
         {product.image ? (
           <img
@@ -28,7 +29,8 @@ export function ProductCard({ product }: { product: Product }) {
             }`}
           />
         ) : (
-          <span className="text-muted flex size-full items-center justify-center text-xs">
+          <span className="text-muted flex size-full flex-col items-center justify-center gap-2 text-xs">
+            <img src={asset("/emblem.png")} alt="" className="size-12 opacity-50" />
             Фото скоро появится
           </span>
         )}
@@ -71,7 +73,12 @@ export function ProductCard({ product }: { product: Product }) {
         <Link href={href} className="hover:text-primary line-clamp-2 text-sm leading-snug">
           {product.name}
         </Link>
-        <p className="text-muted mb-2 text-xs">{product.category.name}</p>
+        <p className="text-muted mb-2 text-xs">
+          {product.category.name}
+          {product.in_stock && product.stock <= 5 && (
+            <span className="text-sale font-semibold"> · осталось {product.stock}</span>
+          )}
+        </p>
 
         {product.in_stock ? (
           <button

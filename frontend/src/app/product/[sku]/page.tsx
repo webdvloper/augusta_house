@@ -8,7 +8,7 @@ import { Gallery } from "@/components/Gallery";
 import { Icon } from "@/components/Icon";
 import { ProductGrid } from "@/components/ProductCard";
 import { Breadcrumbs, PageSkeleton, SectionTitle } from "@/components/Ui";
-import { api, ApiError } from "@/lib/api";
+import { allProducts, api, ApiError } from "@/lib/api";
 import { IS_STATIC } from "@/lib/config";
 import { formatPrice } from "@/lib/format";
 
@@ -16,8 +16,9 @@ import { formatPrice } from "@/lib/format";
 const getProduct = cache((sku: string) => api.product(sku));
 
 export async function generateStaticParams() {
-  if (!IS_STATIC) return [{ sku: "__placeholder__" }];
-  return (await api.products({ page_size: 60 })).results.map(({ sku }) => ({ sku }));
+  const products = IS_STATIC ? await allProducts() : [];
+  // Пустой список Next не принимает: пока в базе нет товаров, отдаём заглушку (→ 404).
+  return products.length ? products.map(({ sku }) => ({ sku })) : [{ sku: "__placeholder__" }];
 }
 
 export async function generateMetadata({ params }: PageProps<"/product/[sku]">): Promise<Metadata> {

@@ -1,21 +1,44 @@
 import Link from "next/link";
+import { Suspense } from "react";
 
+import { api } from "@/lib/api";
 import { asset } from "@/lib/config";
 import { company } from "@/lib/format";
 
 import { Icon } from "./Icon";
 
+type Links = readonly (readonly [string, string])[];
+
+/** Разделы каталога берутся из базы: что добавили в админке, то и в подвале. */
+async function CatalogLinks() {
+  const categories = await api.categories().catch(() => []);
+  return (
+    <LinkList
+      links={[
+        ["Все рубрики", "/catalog"],
+        ...categories
+          .filter((category) => category.product_count > 0)
+          .map((category) => [category.name, `/catalog/${category.slug}`] as const),
+      ]}
+    />
+  );
+}
+
+function LinkList({ links }: { links: Links }) {
+  return (
+    <ul className="text-mint/90 space-y-2 pb-4 text-sm">
+      {links.map(([label, href]) => (
+        <li key={href}>
+          <Link href={href} className="hover:text-secondary transition-colors">
+            {label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 const sections = [
-  {
-    title: "Каталог",
-    links: [
-      ["Все рубрики", "/catalog"],
-      ["Ткани", "/catalog/tkani"],
-      ["Шторы", "/catalog/shtory"],
-      ["Декор для штор", "/catalog/dekor-dlya-shtor"],
-      ["Подушки", "/catalog/podushki"],
-    ],
-  },
   {
     title: "Покупателям",
     links: [
@@ -59,7 +82,7 @@ export function Footer() {
           </p>
         </div>
 
-        {sections.map((section) => (
+        {[{ title: "Каталог", links: null }, ...sections].map((section) => (
           // На телефоне разделы сворачиваются, на десктопе всегда раскрыты.
           <details key={section.title} open className="group border-white/15 max-md:border-t">
             <summary className="flex list-none items-center justify-between py-3 font-bold md:pointer-events-none md:py-0 md:pb-3 [&::-webkit-details-marker]:hidden">
@@ -69,15 +92,13 @@ export function Footer() {
                 className="size-4 rotate-90 transition-transform group-open:-rotate-90 md:hidden"
               />
             </summary>
-            <ul className="text-mint/90 space-y-2 pb-4 text-sm">
-              {section.links.map(([label, href]) => (
-                <li key={href}>
-                  <Link href={href} className="hover:text-secondary">
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {section.links ? (
+              <LinkList links={section.links} />
+            ) : (
+              <Suspense fallback={<LinkList links={[["Все рубрики", "/catalog"]]} />}>
+                <CatalogLinks />
+              </Suspense>
+            )}
           </details>
         ))}
       </div>

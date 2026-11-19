@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 
 import { Faq } from "@/components/Faq";
-import { HeroCarousel } from "@/components/HeroCarousel";
+import { Hero } from "@/components/Hero";
 import { Icon, type IconName } from "@/components/Icon";
 import { ProductGridSkeleton } from "@/components/ProductCard";
 import { CategoryTiles, CollectionsShowcase, PopularProducts } from "@/components/Sections";
@@ -21,12 +21,17 @@ const mapUrl = `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(compa
 export default function HomePage() {
   return (
     <div className="container-page space-y-12 py-5 sm:space-y-16 sm:py-8">
-      <HeroCarousel />
+      <Suspense fallback={<div className="skeleton h-72 w-full rounded-3xl sm:h-96" />}>
+        <Hero />
+      </Suspense>
 
       <ul className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         {benefits.map((benefit) => (
-          <li key={benefit.title} className="card flex items-start gap-3 p-4">
-            <span className="bg-mint text-primary flex size-10 shrink-0 items-center justify-center rounded-full">
+          <li
+            key={benefit.title}
+            className="card hover:border-primary/40 flex items-start gap-3 p-4 transition-colors"
+          >
+            <span className="bg-mint text-primary flex size-11 shrink-0 items-center justify-center rounded-full">
               <Icon name={benefit.icon} />
             </span>
             <span>

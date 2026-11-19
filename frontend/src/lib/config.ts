@@ -1,7 +1,7 @@
 /**
  * Режим сборки. Обычный — витрина ходит в Django API.
- * Статичный (NEXT_PUBLIC_STATIC_DEMO=1) — демо для GitHub Pages: каталог берётся
- * из снимка demo-catalog.json, заказы не отправляются на сервер.
+ * Статичный (NEXT_PUBLIC_STATIC_DEMO=1) — для GitHub Pages: каталог берётся
+ * из снимка базы (src/generated/catalog.json), заказы не отправляются на сервер.
  */
 export const IS_STATIC = process.env.NEXT_PUBLIC_STATIC_DEMO === "1";
 

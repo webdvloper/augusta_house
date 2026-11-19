@@ -1,4 +1,5 @@
 import { asset } from "./config";
+import { ApiError } from "./errors";
 import type {
   Category,
   Collection,
@@ -9,7 +10,10 @@ import type {
   ProductDetail,
 } from "./types";
 
-/** Реализация API поверх снимка каталога — для статичной демо-версии без бэкенда. */
+/**
+ * Реализация API поверх снимка каталога — для статичной версии без бэкенда.
+ * Снимок выгружается из базы Django командой export_static при сборке.
+ */
 
 type SnapshotProduct = Omit<ProductDetail, "related"> & {
   collections: string[];
@@ -56,11 +60,15 @@ function withAssets(categories: Category[]): Category[] {
 }
 
 function load(): Promise<Snapshot> {
-  cached ??= import("./demo-catalog.json").then((module) => {
-    const raw = module.default as Snapshot;
+  cached ??= import("@catalog-snapshot").then((module) => {
+    const raw = module.default as unknown as Snapshot;
     return {
       ...raw,
       categories: withAssets(raw.categories),
+      collections: raw.collections.map((collection) => ({
+        ...collection,
+        image: collection.image && asset(collection.image),
+      })),
       products: raw.products.map((product) => ({
         ...product,
         image: product.image && asset(product.image),
@@ -131,9 +139,10 @@ function toCollection(snapshot: Snapshot, slug: string, preview: number): Collec
   };
 }
 
-class NotFoundError extends Error {
-  name = "ApiError";
-  status = 404;
+class NotFoundError extends ApiError {
+  constructor(message: string) {
+    super(message, 404);
+  }
 }
 
 export const staticApi = {
@@ -164,9 +173,11 @@ export const staticApi = {
     return { ...product, related };
   },
 
-  async collections(preview = 4): Promise<Collection[]> {
+  async collections(preview = 4, featured = false): Promise<Collection[]> {
     const snapshot = await load();
-    return snapshot.collections.map(({ slug }) => toCollection(snapshot, slug, preview)!);
+    return snapshot.collections
+      .filter((collection) => !featured || collection.is_featured)
+      .map(({ slug }) => toCollection(snapshot, slug, preview)!);
   },
 
   async collection(slug: string): Promise<Collection> {

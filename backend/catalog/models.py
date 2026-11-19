@@ -1,12 +1,21 @@
 from decimal import Decimal
 
+from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator
 from django.db import models
+
+from .utils import unique_slug
 
 
 class Category(models.Model):
     name = models.CharField("Название", max_length=120)
-    slug = models.SlugField("Слаг", max_length=140, unique=True)
+    slug = models.SlugField(
+        "Адрес (слаг)",
+        max_length=140,
+        unique=True,
+        blank=True,
+        help_text="Часть адреса страницы. Оставьте пустым — заполнится из названия.",
+    )
     parent = models.ForeignKey(
         "self",
         verbose_name="Родительская рубрика",
@@ -14,8 +23,15 @@ class Category(models.Model):
         blank=True,
         related_name="children",
         on_delete=models.CASCADE,
+        help_text="Пусто — раздел верхнего уровня (например, «Ткани»).",
     )
-    image = models.ImageField("Обложка", upload_to="categories/", blank=True)
+    description = models.TextField("Описание", blank=True)
+    image = models.ImageField(
+        "Обложка",
+        upload_to="categories/",
+        blank=True,
+        help_text="Если не задана, берётся фото первого товара рубрики.",
+    )
     sort_order = models.PositiveIntegerField("Порядок", default=0)
 
     class Meta:
@@ -25,6 +41,18 @@ class Category(models.Model):
 
     def __str__(self) -> str:
         return f"{self.parent.name} → {self.name}" if self.parent_id else self.name
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = unique_slug(Category, self.name, self.pk)
+        super().save(*args, **kwargs)
+
+    def clean(self):
+        node = self.parent
+        while node is not None:
+            if node.pk == self.pk:
+                raise ValidationError({"parent": "Рубрика не может быть вложена сама в себя."})
+            node = node.parent
 
     def descendant_ids(self) -> list[int]:
         """Идентификаторы рубрики и всех вложенных рубрик."""
@@ -44,7 +72,9 @@ class Product(models.Model):
         METER = "м", "метр"
         SET = "компл", "комплект"
 
-    sku = models.CharField("Артикул", max_length=64, unique=True)
+    sku = models.CharField(
+        "Артикул", max_length=64, unique=True, help_text="Используется в адресе карточки товара."
+    )
     name = models.CharField("Название", max_length=255)
     description = models.TextField("Описание", blank=True)
     price = models.DecimalField(
@@ -56,6 +86,7 @@ class Product(models.Model):
         decimal_places=2,
         null=True,
         blank=True,
+        validators=[MinValueValidator(Decimal("0"))],
         help_text="Заполните, чтобы показать скидку на витрине.",
     )
     stock = models.PositiveIntegerField("Остаток", default=0)
@@ -67,6 +98,7 @@ class Product(models.Model):
     is_new = models.BooleanField("Новинка", default=False)
     views_count = models.PositiveIntegerField("Просмотры", default=0, editable=False)
     created_at = models.DateTimeField("Добавлен", auto_now_add=True)
+    updated_at = models.DateTimeField("Изменён", auto_now=True)
 
     class Meta:
         verbose_name = "Товар"
@@ -75,6 +107,12 @@ class Product(models.Model):
 
     def __str__(self) -> str:
         return f"{self.name} ({self.sku})"
+
+    def clean(self):
+        if self.old_price is not None and self.price is not None and self.old_price <= self.price:
+            raise ValidationError(
+                {"old_price": "Старая цена должна быть больше текущей — иначе скидки нет."}
+            )
 
     @property
     def discount_percent(self) -> int:
@@ -102,11 +140,29 @@ class ProductPhoto(models.Model):
 
 class Collection(models.Model):
     name = models.CharField("Название", max_length=120)
-    slug = models.SlugField("Слаг", max_length=140, unique=True)
+    slug = models.SlugField(
+        "Адрес (слаг)",
+        max_length=140,
+        unique=True,
+        blank=True,
+        help_text="Часть адреса страницы. Оставьте пустым — заполнится из названия.",
+    )
     description = models.CharField("Описание", max_length=255, blank=True)
+    image = models.ImageField(
+        "Обложка",
+        upload_to="collections/",
+        blank=True,
+        help_text="Фон баннера на главной. Если не задана, берётся фото первого товара.",
+    )
     products = models.ManyToManyField(
         Product, verbose_name="Товары", related_name="collections", blank=True
     )
+    is_featured = models.BooleanField(
+        "На главной",
+        default=True,
+        help_text="Показывать подборку в баннере и блоках главной страницы.",
+    )
+    is_hidden = models.BooleanField("Скрыта с витрины", default=False)
     sort_order = models.PositiveIntegerField("Порядок", default=0)
 
     class Meta:
@@ -116,3 +172,8 @@ class Collection(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = unique_slug(Collection, self.name, self.pk)
+        super().save(*args, **kwargs)

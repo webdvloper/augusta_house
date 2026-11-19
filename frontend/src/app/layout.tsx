@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MobileNav } from "@/components/MobileNav";
 import { IS_STATIC } from "@/lib/config";
+import { company } from "@/lib/format";
 
 import "./globals.css";
 
@@ -26,7 +27,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col pb-16 md:pb-0">
         {IS_STATIC && (
           <p className="bg-secondary text-text px-4 py-1.5 text-center text-xs font-semibold">
-            Демо-версия сайта: каталог показан для примера, заказы не отправляются.
+            Онлайн-заказ на этой версии сайта не отправляется — оформите заказ по телефону{" "}
+            {company.phone}.
           </p>
         )}
         <Header />

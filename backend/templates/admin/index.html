@@ -1,0 +1,15 @@
+{% extends "admin/index.html" %}
+
+{% block content %}
+<div class="ah-hint">
+  <strong>Как наполнять витрину.</strong>
+  Сначала создайте <a href="{% url 'admin:catalog_category_changelist' %}">рубрики</a>
+  (разделы верхнего уровня и вложенные), затем добавьте
+  <a href="{% url 'admin:catalog_product_add' %}">товары</a> с фото и соберите их в
+  <a href="{% url 'admin:catalog_collection_changelist' %}">подборки</a>.
+  Подборки с отметкой «На главной» попадают в баннер и блоки главной страницы.
+  Чтобы обновить сайт на GitHub Pages, выполните <code>python manage.py catalog_save</code>
+  и запушьте папку <code>backend/data</code> в ветку <code>main</code>.
+</div>
+{{ block.super }}
+{% endblock %}
